@@ -6,7 +6,7 @@
     margin: 2vw 0;
 }
 
-.Button-Bar>div {
+.Button-Bar div {
     display: flex;
     flex-direction: row;
     justify-content: center;

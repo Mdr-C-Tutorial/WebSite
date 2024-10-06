@@ -1,28 +1,29 @@
 import './FooterOthers.css'
+import { Link } from 'react-router-dom';
 
 function FooterOthers() {
     return (
         <footer className="FooterOthers">
             <h1>Others</h1>
             <div style={{ marginLeft: ".5vw" }}>
-                <p onClick={() => {
-                    window.location.href = "/feedback"
-                }}>Observations and recommendations</p>
-                <p onClick={() => {
-                    window.open("https://qm.qq.com/q/dt2eY9PE8o")
-                }}>Contact Mdr</p>
-                <p onClick={() => {
-                    window.location.href = "/about"
-                }}>About this Website</p>
-                <p onClick={() => {
-                    window.location.href = "/stories"
-                }}>History and Fun</p>
-                <p onClick={() => {
-                    window.location.href = "/credits"
-                }}>Credits</p>
-                <p onClick={() => {
-                    window.location.href = "/tech"
-                }}>Technology Stacks</p>
+                <Link to={"/feedback"}>
+                    <p>Observations and recommendations</p>
+                </Link>
+                <Link to={"https://qm.qq.com/q/dt2eY9PE8o"} target="_blank">
+                    <p>Contact Mdr</p>
+                </Link>
+                <Link to={"/about"}>
+                    <p>About this Website</p>
+                </Link>
+                <Link to={"/stories"}>
+                    <p>History and Fun</p>
+                </Link>
+                <Link to={"/credits"}>
+                    <p>Credits</p>
+                </Link>
+                <Link to={"/tech"}>
+                    <p>Technology Stacks</p>
+                </Link>
             </div>
         </footer>
     )

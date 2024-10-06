@@ -1,19 +1,20 @@
 import './FooterTools.css';
+import { Link } from 'react-router-dom';
 
 function FooterTools() {
     return (
         <footer className="FooterTools">
             <h1>Tools</h1>
             <div style={{ marginLeft: ".5vw" }}>
-                <p onClick={() => {
-                    window.location.href = "https://visualstudio.microsoft.com/zh-hans/vs/"
-                }}>Visual Studio 2022</p>
-                <p onClick={() => {
-                    window.location.href = "https://code.visualstudio.com/Download/"
-                }}>Visual Studio Code</p>
-                <p onClick={() => {
-                    window.location.href = "https://www.devcpp6.com/"
-                }}>Dev C++ 6.0 g</p>
+                <Link to={"https://visualstudio.microsoft.com/zh-hans/vs/"} target="_blank">
+                    <p>Visual Studio 2022</p>
+                </Link>
+                <Link to={"https://code.visualstudio.com/Download/"} target="_blank">
+                    <p>Visual Studio Code</p>
+                </Link>
+                <Link to={"https://www.devcpp6.com/"} target="_blank">
+                    <p>Dev C++ 6.0 g</p>
+                </Link>
             </div>
         </footer>
     )
