@@ -27,32 +27,32 @@ import Register from './components/Register/Register';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <React.StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<App />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/discussion" element={<Discussion />} />
-                <Route path="/mdr" element={<Mdr />} />
-                <Route path="/story" element={<Story />} />
-                <Route path="/tech" element={<TechStack />} />
-                <Route path="/tutorial" element={<Tutorial />} />
-                <Route path="/credits" element={<Credits />} />
-                <Route path="/feedback" element={<FeedBack />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/handout" element={<Handout />} />
-                <Route path="/search" element={<SearchPage />} />
-                <Route path="/tutorial/01/:id" element={<HelloWorld />} />
-                <Route path="/tutorial/02/:id" element={<Numbers />} />
-                <Route path="/tutorial/03/:id" element={<Statements />} />
-                <Route path="/tutorial/04/:id" element={<Functions />} />
-                <Route path="/tutorial/05/:id" element={<ArraysPointers />} />
-                <Route path="/tutorial/06/:id" element={<StructuresEnums />} />
-                <Route path="/tutorial/07/:id" element={<Concurrent />} />
-            </Routes>
-        </BrowserRouter>
-    </React.StrictMode>
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/discussion" element={<Discussion />} />
+        <Route path="/mdr" element={<Mdr />} />
+        <Route path="/story" element={<Story />} />
+        <Route path="/tech" element={<TechStack />} />
+        <Route path="/tutorial" element={<Tutorial />} />
+        <Route path="/credits" element={<Credits />} />
+        <Route path="/feedback" element={<FeedBack />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/handout" element={<Handout />} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/tutorial/01/:id" element={<HelloWorld />} />
+        <Route path="/tutorial/02/:id" element={<Numbers />} />
+        <Route path="/tutorial/03/:id" element={<Statements />} />
+        <Route path="/tutorial/04/:id" element={<Functions />} />
+        <Route path="/tutorial/05/:id" element={<ArraysPointers />} />
+        <Route path="/tutorial/06/:id" element={<StructuresEnums />} />
+        <Route path="/tutorial/07/:id" element={<Concurrent />} />
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

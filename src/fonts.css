@@ -1,107 +1,106 @@
 @font-face {
     font-family: 'Jetbrains Mono';
-    src: url(/public/fonts/JetBrains/JetBrainsMono-Thin.ttf);
+    src: url(/fonts/JetBrains/JetBrainsMono-Thin.ttf);
     font-weight: 100;
 }
 
 @font-face {
     font-family: 'Jetbrains Mono';
-    src: url(/public/fonts/JetBrains/JetBrainsMono-ExtraLight.ttf);
+    src: url(fonts/JetBrains/JetBrainsMono-ExtraLight.ttf);
     font-weight: 200;
 }
 
 @font-face {
     font-family: 'Jetbrains Mono';
-    src: url(/public/fonts/JetBrains/JetBrainsMono-Light.ttf);
+    src: url(/fonts/JetBrains/JetBrainsMono-Light.ttf);
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'Jetbrains Mono';
-    src: url(/public/fonts/JetBrains/JetBrainsMono-Regular.ttf);
+    src: url(/fonts/JetBrains/JetBrainsMono-Regular.ttf);
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Jetbrains Mono';
-    src: url(/public/fonts/JetBrains/JetBrainsMono-Medium.ttf);
+    src: url(/fonts/JetBrains/JetBrainsMono-Medium.ttf);
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Jetbrains Mono';
-    src: url(/public/fonts/JetBrains/JetBrainsMono-SemiBold.ttf);
+    src: url(/fonts/JetBrains/JetBrainsMono-SemiBold.ttf);
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'Jetbrains Mono';
-    src: url(/public/fonts/JetBrains/JetBrainsMono-Bold.ttf);
+    src: url(/fonts/JetBrains/JetBrainsMono-Bold.ttf);
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Jetbrains Mono';
-    src: url(/public/fonts/JetBrains/JetBrainsMono-ExtraBold.ttf);
+    src: url(/fonts/JetBrains/JetBrainsMono-ExtraBold.ttf);
     font-weight: 800;
 }
-
 
 @font-face {
     font-family: 'Verdana';
-    src: url(/public/fonts/Verdana-1.ttf);
+    src: url(/fonts/Verdana-1.ttf);
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(/public/fonts/Poppins/Poppins-Thin.ttf);
+    src: url(/fonts/Poppins/Poppins-Thin.ttf);
     font-weight: 100;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(/public/fonts/Poppins/Poppins-ExtraLight.ttf);
+    src: url(/fonts/Poppins/Poppins-ExtraLight.ttf);
     font-weight: 200;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(/public/fonts/Poppins/Poppins-Light.ttf);
+    src: url(/fonts/Poppins/Poppins-Light.ttf);
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(/public/fonts/Poppins/Poppins-Regular.ttf);
+    src: url(/fonts/Poppins/Poppins-Regular.ttf);
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(/public/fonts/Poppins/Poppins-Medium.ttf);
+    src: url(/fonts/Poppins/Poppins-Medium.ttf);
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(/public/fonts/Poppins/Poppins-SemiBold.ttf);
+    src: url(/fonts/Poppins/Poppins-SemiBold.ttf);
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(/public/fonts/Poppins/Poppins-Bold.ttf);
+    src: url(/fonts/Poppins/Poppins-Bold.ttf);
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(/public/fonts/Poppins/Poppins-ExtraBold.ttf);
+    src: url(/fonts/Poppins/Poppins-ExtraBold.ttf);
     font-weight: 800;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url(/public/fonts/Poppins/Poppins-Black.ttf);
+    src: url(/fonts/Poppins/Poppins-Black.ttf);
     font-weight: 900;
 }
