@@ -9,6 +9,7 @@ import Chapter13 from "../Chapter13";
 import Chapter14 from "../Chapter14";
 import Chapter15 from "../Chapter15";
 
+// eslint-disable-next-line react/jsx-key
 const arr = [<Chapter11 />, <Chapter12 />, <Chapter13 />, <Chapter14 />, <Chapter15 />];
 
 function ChapterLeft({ id }) {
@@ -94,5 +95,9 @@ function HelloWorld() {
             </div>
         </div>
     )
+}
+
+ChapterLeft.propTypes = {
+    id: Number
 }
 export default HelloWorld

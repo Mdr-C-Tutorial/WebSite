@@ -3,6 +3,7 @@ import ReturnMainPage from "../mess/ReturnMainPage";
 import TutorialButtonBar from "./TutorialButtonBar";
 import { Link } from "react-router-dom";
 import ParseSentence from '../mess/markdownparser';
+// eslint-disable-next-line react-refresh/only-export-components
 export function scrollToAnchor(anchorName) {
     if (anchorName) {
         // 找到锚点
@@ -45,8 +46,9 @@ function Tutorial() {
                 </div>
                 <div className="Tutorial-Main-Article">
                     <ParseSentence str={para00} />
-                    <h1 onClick={() => { window.location.href = "/tutorial/01/0" }}>输出字符串</h1>
-
+                    <Link to={"/tutorial/01/0"}>
+                        <h1>输出字符串</h1>
+                    </Link>
                     <ParseSentence str={para01} />
                     <p>
                         <Link to="/tutorial/01/0">1. C语言的基本知识</Link>
@@ -60,8 +62,9 @@ function Tutorial() {
                         <Link to="/tutorial/01/2">3. 添加参数</Link>
                         <ParseSentence inline={true} str={para04} />
                     </p>
-
-                    <h1 onClick={() => { window.location.href = "/tutorial/02/0" }}>对象与运算</h1>
+                    <Link to={"/tutorial/02/0"}>
+                        <h1>对象与运算</h1>
+                    </Link>
                     <ParseSentence str={para11} />
                     <p>
                         <Link to="/tutorial/02/0">1. 对象和类型</Link>
@@ -75,12 +78,24 @@ function Tutorial() {
                         <Link to="/tutorial/02/2">3. 其他运算符</Link>
                         <ParseSentence inline={true} str={para14} />
                     </p>
-
-                    <h1 onClick={() => { window.location.href = "/tutorial/03/0" }}>分支与循环</h1>
-                    <h1 onClick={() => { window.location.href = "/tutorial/04/0" }}>函数与递归</h1>
-                    <h1 onClick={() => { window.location.href = "/tutorial/05/0" }}>数组与指针</h1>
-                    <h1 onClick={() => { window.location.href = "/tutorial/06/0" }}>结构与枚举</h1>
-                    <h1 onClick={() => { window.location.href = "/tutorial/07/0" }}>并发与原子</h1>
+                    <Link to={"/tutorial/02/0"}>
+                        <h1>对象与运算</h1>
+                    </Link>
+                    <Link to={"/tutorial/03/0"}>
+                        <h1>分支与循环</h1>
+                    </Link>
+                    <Link to={"/tutorial/04/0"}>
+                        <h1>函数与递归</h1>
+                    </Link>
+                    <Link to={"/tutorial/05/0"}>
+                        <h1>数组与指针</h1>
+                    </Link>
+                    <Link to={"/tutorial/06/0"}>
+                        <h1>结构与枚举</h1>
+                    </Link>
+                    <Link to={"/tutorial/07/0"}>
+                        <h1>并发与原子</h1>
+                    </Link>
                 </div>
             </div>
         </div>

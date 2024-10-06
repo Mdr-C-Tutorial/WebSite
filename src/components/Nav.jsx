@@ -30,7 +30,9 @@ function Nav({ user }) {
                     </div>
                     <p>Website</p>
                     &nbsp;
-                    <FaChevronDown id="ChevronDown" />
+                    <div className="WebsiteChevronDownWrapper">
+                        <FaChevronDown id="ChevronDown" />
+                    </div>
                 </div>
                 <Link to="https://mdr.aymao.com/C" target={"_blank"}>
                     <FaMarkdown className="Nav-Icon Icon-Link" />
@@ -44,6 +46,10 @@ function Nav({ user }) {
             </div>
         </div>
     )
+}
+
+Nav.propTypes = {
+    user: String
 }
 
 export default Nav;

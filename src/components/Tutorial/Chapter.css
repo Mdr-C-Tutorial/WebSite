@@ -39,6 +39,7 @@
     flex-direction: row;
     align-items: center;
     gap: 1vw;
+    font-size: 1vw;
 }
 
 .Chapter h1 {

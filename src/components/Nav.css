@@ -51,6 +51,10 @@
     flex-direction: column;
 }
 
+.Nav-Right .Website .WebsiteChevronDownWrapper {
+    font-size: 1vw;
+}
+
 .Nav-Right .Website:hover #ChevronDown {
     transform: rotate(180deg);
 }
@@ -75,18 +79,23 @@
     color: rebeccapurple;
 }
 
-.Nav-Left-Title {
+.Nav-Left .Nav-Left-Title {
     margin-left: 3vw;
     margin-right: 5vw;
     font-size: 2vw;
     line-height: 1.5vw;
-    font-family: 'JetBrains Mono SemiBold', serif;
+    font-family: 'JetBrains Mono', serif;
     color: rebeccapurple;
+}
+
+.Nav-Right>a {
+    font-size: 2vw;
 }
 
 .Nav-Icon {
     width: 2vw;
     height: 2vw;
+    font-size: 2vw;
     transition: all 2s cubic-bezier(0.5, 0.01, 0.9, .1);
 }
 
