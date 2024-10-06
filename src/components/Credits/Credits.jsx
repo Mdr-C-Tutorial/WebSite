@@ -29,6 +29,7 @@ function Credits() {
                 <CreditsItem name="A4-Tacks" links={[{ logo: <FaGithub />, to: "https://github.com/A4-Tacks" }]} />
                 <CreditsItem name="ChatRBQ" links={[{ logo: <FaGithub />, to: "https://github.com/fawdlstty" }]} />
                 <CreditsItem name="Kill" links={[{ logo: <FaGithub />, to: "https://github.com/Killcerr" }]} />
+                <CreditsItem name="Lixuanze" links={[{ logo: <FaGithub />, to: "https://github.com/Lxzaa-code" }]} />
             </div>
             <h2>Organizations</h2>
             <div className="Credits-Wrapper">
