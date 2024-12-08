@@ -14,7 +14,6 @@ import Tutorial from "./components/Tutorial/Tutorial";
 import Credits from "./components/Credits/Credits";
 import FeedBack from "./components/FeedBack/FeedBack";
 import About from "./components/About/About";
-import Handout from "./components/Handout/Handout";
 import SearchPage from "./components/Search/SearchPage";
 import HelloWorld from "./components/Tutorial/HelloWorld/HelloWorld";
 import Numbers from "./components/Tutorial/Numbers/Numbers";
@@ -41,7 +40,6 @@ root.render(
         <Route path="/credits" element={<Credits />} />
         <Route path="/feedback" element={<FeedBack />} />
         <Route path="/about" element={<About />} />
-        <Route path="/handout" element={<Handout />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/tutorial/01/:id" element={<HelloWorld />} />
         <Route path="/tutorial/02/:id" element={<Numbers />} />

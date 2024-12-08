@@ -14,7 +14,7 @@
     border-radius: 1.75vw;
 }
 
-.Tutorial-Button-Bar #Handout-Button,
+.Tutorial-Button-Bar #Repository-Button,
 .Tutorial-Button-Bar #Playground-Button {
     background: white;
     border: 1px solid rebeccapurple;
@@ -27,7 +27,7 @@
     transition: all 0.3s;
 }
 
-.Tutorial-Button-Bar #Handout-Button:hover,
+.Tutorial-Button-Bar #Repository-Button:hover,
 .Tutorial-Button-Bar #Playground-Button:hover {
     background: rebeccapurple;
     color: white;

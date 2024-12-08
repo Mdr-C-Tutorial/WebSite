@@ -29,7 +29,7 @@
     background: #7744aa;
 }
 
-.Button-Bar #Discussion-Button {
+.Button-Bar #Repository-Button {
     color: rebeccapurple;
     border: 1px solid rebeccapurple;
     height: 1.5vw;
@@ -39,6 +39,6 @@
     gap: 0.5vw;
 }
 
-.Button-Bar #Discussion-Button:hover {
+.Button-Bar #Repository-Button:hover {
     background: #eeeeee;
 }

@@ -1,5 +1,6 @@
 import './Nav.css';
-import { FaChevronDown, FaGithub, FaMarkdown, FaRegFileCode } from "react-icons/fa";
+import { FaChevronDown, FaGithub, FaRegFileCode } from "react-icons/fa";
+import { PiChatsBold } from "react-icons/pi";
 import Search from "./Nav/Search";
 import { Link } from "react-router-dom";
 
@@ -34,8 +35,8 @@ function Nav({ user }) {
                         <FaChevronDown id="ChevronDown" />
                     </div>
                 </div>
-                <Link to="https://mdr.aymao.com/C" target={"_blank"}>
-                    <FaMarkdown className="Nav-Icon Icon-Link" />
+                <Link to="/discussion" target={"_blank"}>
+                    <PiChatsBold className="Nav-Icon Icon-Link" />
                 </Link>
                 <Link to="https://github.com/Mdr-C-Tutorial/C" target={"_blank"}>
                     <FaGithub className="Nav-Icon Icon-Link" />

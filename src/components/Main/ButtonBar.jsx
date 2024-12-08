@@ -10,9 +10,9 @@ function ButtonBar() {
                     Start
                 </div>
             </Link>
-            <Link to={"/discussion"}>
-                <div id="Discussion-Button">
-                    Discussion
+            <Link to={"https://mdr.aymao.com/C/"}>
+                <div id="Repository-Button">
+                    Repository
                     <FaArrowRight />
                 </div>
             </Link>
