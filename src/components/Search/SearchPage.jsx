@@ -1,6 +1,7 @@
 import ReturnMainPage from '../mess/ReturnMainPage';
 import Search from '../Nav/Search';
 import PageLanguageButton from './PageLanguageButton';
+import ResultBlock from './ResultBlock';
 import './SearchPage.css';
 function SearchPage() {
     return (
@@ -18,22 +19,25 @@ function SearchPage() {
             </div>
             <div className="SearchResult">
                 <div className="ResultMCT">
-                    <div className="ResultBlock">
-                        1
-                    </div>
+                    <ResultBlock title={"Title 01"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil` esse quo inventore corporis eos quibusdam autem 33 aperiam facilis?"} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 02"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 03"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 04"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 05"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
                 </div>
                 <div className="ResultCppRef">
-                    <div className="ResultBlock">
-                        <h1>1</h1>
-                        1
-                    </div>
-                    <div className="ResultBlock">1</div>
-                    <div className="ResultBlock">1</div>
+                    <ResultBlock title={"Title 02"} description={"In **velit** enim et *libero* dolorum id `voluptatem` esse qui **consequatur officia** At dignissimos voluptas. Ea velit quas et odit eius sed officiis similique ut iure accusamus aut officia accusantium sed magni placeat?"} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 02"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 03"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 04"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 05"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
                 </div>
                 <div className="ResultGoogle">
-                    <div className="ResultBlock">1</div>
-                    <div className="ResultBlock">1</div>
-                    <div className="ResultBlock">1</div>
+                    <ResultBlock title={"Title 03"} description={"Lorem **ipsum** *dolo* sit amet. In `neque` illo ut rerum dolorem quo dolorum voluptas At culpa explicabo est totam dolorem aut expedita magnam. Aut numquam aperiam ad magnam aspernatur est neque dolorum est aliquam animi et facere ullam ut magnam repudiandae. Eos reprehenderit nesciunt qui quia laborum hic molestiae vero id sunt necessitatibus."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 02"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 03"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 04"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
+                    <ResultBlock title={"Title 05"} description={"Aut **vero** quam *et* fugiat possimus. Ut `nigil`."} link={"https://baimingxuan.github.io/react-router6-doc/components/link"} />
                 </div>
             </div>
         </div>

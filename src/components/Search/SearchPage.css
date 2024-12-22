@@ -59,36 +59,3 @@
     align-items: start;
     width: 34vw;
 }
-
-.SearchPage .SearchResult .ResultMCT .ResultBlock,
-.SearchPage .SearchResult .ResultCppRef .ResultBlock,
-.SearchPage .SearchResult .ResultGoogle .ResultBlock {
-    border-radius: 1.5vw;
-    padding: 1.5vw;
-    margin-bottom: 1.5vw;
-    width: 26vw;
-}
-
-.SearchPage .SearchResult .ResultMCT .ResultBlock {
-    border: 2px solid #d3ff9d;
-    background: #f8fff0;
-}
-
-.SearchPage .SearchResult .ResultCppRef .ResultBlock {
-    border: 2px solid #9df8ff;
-    background: #f3ffff;
-}
-
-.SearchPage .SearchResult .ResultGoogle .ResultBlock {
-    border: 2px solid #edc3ff;
-    background: #fef9ff;
-}
-
-.SearchPage .SearchResult .ResultBlock h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-}
-
-.SearchPage .SearchResult .ResultCppRef .ResultBlock h1 {
-    color: #006ea1;
-}

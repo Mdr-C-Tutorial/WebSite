@@ -1,0 +1,87 @@
+.ResultBlock {
+    border-radius: 1.5vw;
+    padding: 1.5vw;
+    margin-bottom: 1.5vw;
+    width: 26vw;
+}
+
+.ResultBlock h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 2vw !important;
+    margin-bottom: 0.5vw;
+    transition: all 0.4s ease-in-out;
+}
+
+.ResultBlock p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.1vw !important;
+    line-height: 1.5vw;
+    align-items: baseline;
+}
+
+.SearchPage .SearchResult .ResultMCT .ResultBlock {
+    border: 2px solid #d3ff9d;
+    background: #f8fff0;
+}
+
+.SearchPage .SearchResult .ResultCppRef .ResultBlock {
+    border: 2px solid #9df8ff;
+    background: #f3ffff;
+}
+
+.SearchPage .SearchResult .ResultGoogle .ResultBlock {
+    border: 2px solid #edc3ff;
+    background: #fef9ff;
+}
+
+.SearchPage .SearchResult .ResultMCT .ResultBlock h1 {
+    color: #4e8a20;
+}
+
+.SearchPage .SearchResult .ResultCppRef .ResultBlock h1 {
+    color: #006ea1;
+}
+
+.SearchPage .SearchResult .ResultGoogle .ResultBlock h1 {
+    color: #85208e;
+}
+
+.SearchPage .SearchResult .ResultMCT .ResultBlock p,
+.SearchPage .SearchResult .ResultMCT .ResultBlock h1:hover {
+    color: #376216;
+}
+
+.SearchPage .SearchResult .ResultCppRef .ResultBlock p,
+.SearchPage .SearchResult .ResultCppRef .ResultBlock h1:hover {
+    color: #004768;
+}
+
+.SearchPage .SearchResult .ResultGoogle .ResultBlock p,
+.SearchPage .SearchResult .ResultGoogle .ResultBlock h1:hover {
+    color: #511057;
+}
+
+.ResultBlock p>span {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 1vw;
+    padding: 0 .4vw;
+    border-radius: .6vw;
+}
+
+.ResultMCT .ResultBlock p>span {
+    background-color: #daffca;
+    color: #213b0d;
+}
+
+.ResultCppRef .ResultBlock p>span {
+    background-color: #cffbfe;
+    color: #002435;
+}
+
+.ResultGoogle .ResultBlock p>span {
+    background-color: #f5dffc;
+    color: #300a33;
+}
