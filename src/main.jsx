@@ -40,7 +40,7 @@ root.render(
         <Route path="/credits" element={<Credits />} />
         <Route path="/feedback" element={<FeedBack />} />
         <Route path="/about" element={<About />} />
-        <Route path="/search" element={<SearchPage />} />
+        <Route path="/search/:name" element={<SearchPage />} />
         <Route path="/tutorial/01/:id" element={<HelloWorld />} />
         <Route path="/tutorial/02/:id" element={<Numbers />} />
         <Route path="/tutorial/03/:id" element={<Statements />} />

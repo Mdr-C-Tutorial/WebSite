@@ -5,7 +5,13 @@ function Search() {
     return (
         <div className="Search">
             <input type="text" id="search" placeholder={"Search Something"} />
-            <CiSearch onClick={() => { window.location.href = "/search"; }} className="Search-button" />
+            <CiSearch onClick={() => {
+                let param = document.getElementById('search').value;
+                console.log(param);
+                if (param != "") {
+                    window.location.href = '/search/' + param;
+                }
+            }} className="Search-button" />
         </div>
     )
 }
