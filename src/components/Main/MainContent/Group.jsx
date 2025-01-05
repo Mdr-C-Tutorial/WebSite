@@ -1,6 +1,7 @@
 import './Group.css'
 import GroupLeft from "./GroupLeft";
 import { FaArrowLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Group() {
     return (
@@ -17,9 +18,11 @@ function Group() {
                     <h2>&&</h2>
                     <p>PDF Books</p>
                 </div>
-                <button onClick={() => {
-                    window.location.href = "https://qm.qq.com/q/ZQqvoa8Fcm"
-                }}><FaArrowLeft />Join!</button>
+                <Link to={"https://qm.qq.com/q/ZQqvoa8Fcm"} target="_blank">
+                    <button>
+                        <FaArrowLeft />Join!
+                    </button>
+                </Link>
             </div>
         </div>
     )

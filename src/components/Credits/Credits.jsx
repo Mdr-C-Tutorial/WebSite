@@ -20,7 +20,7 @@ function Credits() {
                 <CreditsItem name="No" links={[{ logo: <FaGithub />, to: "https://github.com/Kroner" }, { logo: <FaWifi />, to: "https://www.cnblogs.com/Kroner" }]} />
                 <CreditsItem name="革匊习习中" links={[{ logo: <FaGithub />, to: "https://github.com/Juvwxyz" }]} />
                 <CreditsItem name="初心不变-叶子" links={[{ logo: <FaGithub />, to: "https://github.com/FHU-yezi" }, { logo: <IoLogoJavascript />, to: "https://www.jianshu.com/u/ea36c8d8aa30" }]} />
-                <CreditsItem name="0x7E7" links={[{ logo: <FaGithub />, to: "https://github.com/20080217" }]} />
+                <CreditsItem name="0x7E7" links={[{ logo: <FaGithub />, to: "https://github.com/20080217" }]} big="0x7E7" />
                 <CreditsItem name="菲露露" links={[{ logo: <FaGithub />, to: "https://github.com/LovelyLavender4" }]} />
                 <CreditsItem name="Telecomadm" links={[{ logo: <FaGithub />, to: "https://github.com/telecomadm1145" }]} />
                 <CreditsItem name="WHITE TREE" links={[{ logo: <FaGithub />, to: "https://github.com/VinbeWan" }]} big="WT" />
@@ -30,6 +30,8 @@ function Credits() {
                 <CreditsItem name="ChatRBQ" links={[{ logo: <FaGithub />, to: "https://github.com/fawdlstty" }]} />
                 <CreditsItem name="Kill" links={[{ logo: <FaGithub />, to: "https://github.com/Killcerr" }]} />
                 <CreditsItem name="Lixuanze" links={[{ logo: <FaGithub />, to: "https://github.com/Lxzaa-code" }]} />
+                <CreditsItem name="神说" links={[]} />
+                <CreditsItem name="27Onion" links={[]} />
             </div>
             <h2>Organizations</h2>
             <div className="Credits-Wrapper">

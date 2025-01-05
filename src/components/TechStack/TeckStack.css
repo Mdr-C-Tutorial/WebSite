@@ -12,14 +12,27 @@
     color: rebeccapurple;
 }
 
-.TechStack p {
+.TechStack .WebSite {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 1vw;
+    margin-top: 1vw;
+}
+
+.TechStack .WebSite h2 {
+    color: rebeccapurple;
+}
+
+.TechStack .WebSite span {
     margin-top: 2vw;
     font-size: 1.5vw;
-    color: rebeccapurple;
+    font-weight: 300;
+    color: #333;
     transition: all .3s ease-in-out;
     font-family: 'Poppins', sans-serif;
 }
 
-.TechStack p:hover{
-    color: #4a157d;
+.TechStack .WebSite span:hover {
+    color: rebeccapurple;
 }

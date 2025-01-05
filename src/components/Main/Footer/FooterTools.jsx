@@ -12,9 +12,8 @@ function FooterTools() {
                 <Link to={"https://code.visualstudio.com/Download/"} target="_blank">
                     <p>Visual Studio Code</p>
                 </Link>
-                <Link to={"https://www.devcpp6.com/"} target="_blank">
-                    <p>Dev C++ 6.0 g</p>
-                </Link>
+                <Link to={"https://www.cursor.com/"} target="_blank">
+                <p>Cursor</p></Link>
             </div>
         </footer>
     )

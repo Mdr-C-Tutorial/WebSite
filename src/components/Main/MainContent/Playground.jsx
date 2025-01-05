@@ -1,6 +1,7 @@
 import './Playground.css'
 import PlaygroundRight from "./PlaygroundRight";
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Playground() {
     return (
@@ -12,9 +13,7 @@ function Playground() {
                     <p>In Any Time</p>
                 </div>
                 <h2 style={{ marginLeft: ".5vw" }}>ps: Not Only C Supported</h2>
-                <button onClick={
-                    () => { window.location.href = "https://godbolt.org/z/1b965v1hx" }
-                }>Go!<FaArrowRight /></button>
+                <Link to={"https://godbolt.org/z/1b965v1hx"} target="_blank"><button>Go!<FaArrowRight /></button></Link>
             </div>
             <div className="Right">
                 <PlaygroundRight />
