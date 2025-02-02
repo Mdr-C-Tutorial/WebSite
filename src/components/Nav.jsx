@@ -3,8 +3,37 @@ import { FaChevronDown, FaGithub, FaRegFileCode } from "react-icons/fa";
 import { PiChatsBold } from "react-icons/pi";
 import Search from "./Nav/Search";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { host } from '../mdr.config';
+import PropTypes from 'prop-types';
 
-function Nav({ user }) {
+function Nav() {
+    const [isLogged, setIsLogged] = useState(false);
+    const [username, setUsername] = useState('');
+
+    useEffect(() => {
+        const checkAuth = async () => {
+            try {
+                const response = await fetch(host + '/login', {
+                    method: 'GET',
+                    credentials: 'include', // 允许发送和接收 Cookie
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    setIsLogged(true);
+                    setUsername(data.userName);
+                } else {
+                    setIsLogged(false);
+                }
+            } catch (error) {
+                console.error('Error checking auth:', error);
+                setIsLogged(false);
+            }
+        };
+        checkAuth();
+    }, []);
+
     return (
         <div className="Nav">
             <div className="Nav-Left">
@@ -15,10 +44,9 @@ function Nav({ user }) {
             </div>
             <div className="Nav-Right">
                 {
-                    user ? <p className="Logged-In">{user}</p> :
-                        <p className="Log-In" onClick={function () {
-                            window.location.href = "/login"
-                        }}>Log in</p>
+                    isLogged ? <p className="Logged-In">{username}</p> : (<p className="Log-In" onClick={function () {
+                        window.location.href = "/login"
+                    }}>Log In</p>)
                 }
                 <div className="Website">
                     <div className="WebsiteListContainer">
@@ -50,7 +78,7 @@ function Nav({ user }) {
 }
 
 Nav.propTypes = {
-    user: String
+    user: PropTypes.string,
 }
 
 export default Nav;
