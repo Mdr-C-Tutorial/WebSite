@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReturnMainPage from '../mess/ReturnMainPage';
 import Search from '../Nav/Search';
@@ -61,7 +62,9 @@ function SearchPage() {
     const params = useParams()
     let name = params.name
 
-    let _mct, _cppref, _google;
+    useEffect(() => {
+        document.title = "Search - " + name + " | Mdr-C-Tutorial"
+    }, [name]);
 
     fetch('http://localhost:5000/search/' + name).then(res => {
         if (res.ok) {

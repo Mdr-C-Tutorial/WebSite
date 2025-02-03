@@ -5,6 +5,7 @@ import ReturnMainPage from "../mess/ReturnMainPage";
 const Register = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("");
 
     const url = "/login"
     useEffect(() => {
@@ -19,32 +20,45 @@ const Register = () => {
     return (
         <div className="Register">
             <ReturnMainPage />
-            <div className="Register_C">
-                <div className="Register_main">
-                    <h1>注册</h1>
+            <div className="RegisterContainer">
+                <div className="RegisterMain">
+                    <h1>Register</h1>
                     <form onSubmit={register}>
                         <label>
-                            账号：
-                            <input 
-                                type="text" 
-                                value={username} 
-                                onChange={(e) => setUsername(e.target.value)} 
-                                required 
+                            Username:
+                            <input
+                                type="text"
+                                value={username}
+                                onChange={(e) => setUsername(e.target.value)}
+                                required
                             />
                         </label>
-                        <br />
                         <label>
-                            密码：
-                            <input 
-                                type="password" 
-                                value={password} 
-                                onChange={(e) => setPassword(e.target.value)} 
-                                required 
+                            Password:
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                                required
                             />
                         </label>
-                        <br />
-                        <button type="submit">注册</button>
-                        <br />
+                        <label>
+                            Password Again:
+                            <input
+                                type="password"
+                                required
+                            />
+                        </label>
+                        <label>
+                            Email:
+                            <input
+                                type="text"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                required
+                            />
+                        </label>
+                        <button type="submit">Register</button>
                         <a href={url}>已有账号？前去登录</a>
                     </form>
                 </div>

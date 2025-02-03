@@ -6,6 +6,8 @@ import { host } from "../../mdr.config";
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [remember, setRemember] = useState(false);
+
     const url = "/register"
     useEffect(() => {
         document.title = "Login | Mdr-C-Tutorial";
@@ -34,12 +36,12 @@ const Login = () => {
     return (
         <div className="Login">
             <ReturnMainPage />
-            <div className="Login_C">
-                <div className="Login_main">
-                    <h1>登录</h1>
+            <div className="LoginContainer">
+                <div className="LoginMain">
+                    <h1>Log&nbsp; &nbsp;In</h1>
                     <form onSubmit={login}>
                         <label>
-                            账号：
+                            Email:
                             <input
                                 type="text"
                                 value={username}
@@ -47,9 +49,8 @@ const Login = () => {
                                 required
                             />
                         </label>
-                        <br />
                         <label>
-                            密码：
+                            Password:
                             <input
                                 type="password"
                                 value={password}
@@ -57,9 +58,7 @@ const Login = () => {
                                 required
                             />
                         </label>
-                        <br />
-                        <button type="submit">登录</button>
-                        <br />
+                        <button type="submit">Log in</button>
                         <a href={url}>还没账号？前去注册</a>
                     </form>
                 </div>

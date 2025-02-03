@@ -4,60 +4,72 @@
     flex-direction: column;
 }
 
-.Register_main {
-    width: 340px;
-    padding: 20px;
+.RegisterMain {
+    width: 30vw;
+    margin-top: 5vh;
+    padding: 5vh 0;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(1px);
     display: flex;
     flex-direction: column;
+    gap: 2vh;
+    justify-content: center;
     align-items: center;
     border-radius: 6px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.Register_C {
-    display: flex;  
-    justify-content: center;  
+.RegisterContainer {
+    display: flex;
+    justify-content: center;
     align-items: center;
     background-size: cover;
 }
 
-.Register_main h1 {
+.RegisterMain h1 {
     margin-top: 0.5vw;
     font-family: 'Poppins', sans-serif;
-    font-size: 2vw;
-    font-weight: 300;
+    font-size: 3vw;
+    font-weight: 900;
     color: rebeccapurple;
-    text-align: center; 
+    text-align: center;
 }
 
-.Register_main label {
-    color: #000000; 
-    font-size: 1.5vw;
-    margin: 10px 0; 
+.RegisterMain form {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+}
+
+.RegisterMain label {
+    color: #000000;
+    font-size: 1.3vw;
     display: block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
 }
 
-.Register_main input {
-    width: 100%; 
-    padding: 8px; 
-    margin-top: 5px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
+.RegisterMain input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.Register_main button {
-    margin-top: 15px; 
-    padding: 10px 15px; 
-    border: none; 
-    border-radius: 4px; 
-    background-color: rebeccapurple; 
+.RegisterMain button {
+    width: 7vw;
+    height: 3vw;
+    border: none;
+    border-radius: .3vw;
+    background-color: rebeccapurple;
     color: white;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2vw;
+    transition: all 0.3s;
 }
 
-.Register_main button:hover {
+.RegisterMain button:hover {
     background-color: darkviolet;
 }
