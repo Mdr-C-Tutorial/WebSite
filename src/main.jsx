@@ -23,6 +23,8 @@ import ArraysPointers from './components/Tutorial/ArraysPointers/ArraysPointers'
 import StructuresEnums from './components/Tutorial/StructuresEnums/StructuresEnums';
 import Concurrent from './components/Tutorial/Concurrent/Concurrent';
 import Register from './components/Register/Register';
+import Registered from './components/Registered/Registered';
+import Profile from './components/Profile/Profile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -32,6 +34,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/registered" element={<Registered />} />
         <Route path="/discussion" element={<Discussion />} />
         <Route path="/mdr" element={<Mdr />} />
         <Route path="/story" element={<Story />} />
@@ -40,6 +43,7 @@ root.render(
         <Route path="/credits" element={<Credits />} />
         <Route path="/feedback" element={<FeedBack />} />
         <Route path="/about" element={<About />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/search/:name" element={<SearchPage />} />
         <Route path="/tutorial/01/:id" element={<HelloWorld />} />
         <Route path="/tutorial/02/:id" element={<Numbers />} />

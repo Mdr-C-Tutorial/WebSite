@@ -21,7 +21,7 @@ const Login = () => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ username, password }),
+            body: JSON.stringify({ username, password, remember }),
         }).then((response) => {
             if (response.ok) {
                 window.location.href = "/";

@@ -1,7 +1,7 @@
 import './Credits.css';
 import ReturnMainPage from '../mess/ReturnMainPage';
 import { FaGithub } from "react-icons/fa";
-import { FaWifi } from 'react-icons/fa6';
+import { FaWifi, FaBilibili } from 'react-icons/fa6';
 import { IoLogoJavascript } from 'react-icons/io';
 import CreditsItem from './CreditsItem';
 
@@ -19,7 +19,7 @@ function Credits() {
                 <CreditsItem name="JuaJuanchi" links={[{ logo: <FaGithub />, to: "https://github.com/Jua-Juanchi" }]} />
                 <CreditsItem name="No" links={[{ logo: <FaGithub />, to: "https://github.com/Kroner" }, { logo: <FaWifi />, to: "https://www.cnblogs.com/Kroner" }]} />
                 <CreditsItem name="革匊习习中" links={[{ logo: <FaGithub />, to: "https://github.com/Juvwxyz" }]} />
-                <CreditsItem name="初心不变-叶子" links={[{ logo: <FaGithub />, to: "https://github.com/FHU-yezi" }, { logo: <IoLogoJavascript />, to: "https://www.jianshu.com/u/ea36c8d8aa30" }]} />
+                <CreditsItem name="叶子" links={[{ logo: <FaGithub />, to: "https://github.com/FHU-yezi" }, { logo: <IoLogoJavascript />, to: "https://www.jianshu.com/u/ea36c8d8aa30" }]} />
                 <CreditsItem name="0x7E7" links={[{ logo: <FaGithub />, to: "https://github.com/20080217" }]} big="0x7E7" />
                 <CreditsItem name="菲露露" links={[{ logo: <FaGithub />, to: "https://github.com/LovelyLavender4" }]} />
                 <CreditsItem name="Telecomadm" links={[{ logo: <FaGithub />, to: "https://github.com/telecomadm1145" }]} />
@@ -32,6 +32,7 @@ function Credits() {
                 <CreditsItem name="Lixuanze" links={[{ logo: <FaGithub />, to: "https://github.com/Lxzaa-code" }]} />
                 <CreditsItem name="神说" links={[]} />
                 <CreditsItem name="27Onion" links={[]} />
+                <CreditsItem name="左·岚" links={[{ logo: <FaBilibili />, to: "https://space.bilibili.com/27619688" }]} />
             </div>
             <h2>Organizations</h2>
             <div className="Credits-Wrapper">
