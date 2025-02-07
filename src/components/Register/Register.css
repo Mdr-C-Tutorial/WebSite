@@ -39,7 +39,7 @@
 .RegisterMain form {
     display: flex;
     flex-direction: column;
-    gap: 2.5vh;
+    gap: 2vh;
 }
 
 .RegisterMain label {
@@ -55,6 +55,8 @@
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+
 }
 
 .RegisterMain button {
@@ -72,4 +74,36 @@
 
 .RegisterMain button:hover {
     background-color: darkviolet;
+}
+
+.RegisterMain #RegisterUsernameChecker span,
+.RegisterMain #RegisterEmailChecker span,
+.RegisterMain #RegisterPasswordChecker span,
+.RegisterMain #RegisterPasswordConfirmChecker span,
+.RegisterMain #RegisterUsernameChecker span p,
+.RegisterMain #RegisterEmailChecker span p,
+.RegisterMain #RegisterPasswordChecker span p,
+.RegisterMain #RegisterPasswordConfirmChecker span p {
+    height: 1.2vw;
+    font-size: .8vw;
+    font-family: 'JetBrains Mono', monospace;
+    display: flex;
+    font-display: row;
+    gap: 0.2vw;
+    justify-content: start;
+    align-items: center;
+}
+
+.RegisterMain span.TooLong,
+.RegisterMain span.TooShort {
+    color: cornflowerblue;
+
+}
+
+.RegisterMain span.Valid {
+    color: green;
+}
+
+.RegisterMain span.Illegal {
+    color: red;
 }

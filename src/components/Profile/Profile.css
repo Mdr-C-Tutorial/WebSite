@@ -35,7 +35,10 @@
 }
 
 .Profile .ProfileContent .ProfileLeft h1.Admin {
-    color: #b93f3f;
+    text-shadow: 3vw 3vw 6vw #66339966;
+    background: linear-gradient(90deg, #663399 0%, #250e3d 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .Profile .ProfileContent .ProfileLeft h1.User {

@@ -72,3 +72,18 @@
 .LoginMain button:hover {
     background-color: darkviolet;
 }
+
+.LoginMain .Remember {
+    display: flex;
+    font-display: row;
+    justify-content: start;
+    align-items: end;
+    gap: .5vw;
+}
+
+.LoginMain .Remember p {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1vw;
+    line-height: 2vw;
+    color: #444;
+}

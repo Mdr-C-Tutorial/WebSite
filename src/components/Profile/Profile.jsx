@@ -15,8 +15,8 @@ function Profile() {
         username: "mdr",
         userid: "1",
         email: "2972853299@qq.com",
-        emailVerified: true,
-        role: "admin",
+        emailVerified: false,
+        role: "user",
     }
     return (
         <div className="Profile">

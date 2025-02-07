@@ -58,7 +58,20 @@ const Login = () => {
                                 required
                             />
                         </label>
-                        <button type="submit">Log in</button>
+                        <div>
+
+                            <div className="Remember">
+                                <p>Remember me?</p>
+                                <label>
+                                    <input
+                                        type="checkbox"
+                                        value={remember}
+                                        onChange={(e) => setRemember(e.target.value)}
+                                    />
+                                </label>
+                            </div>
+                            <button type="submit">Log in</button>
+                        </div>
                         <a href={url}>还没账号？前去注册</a>
                     </form>
                 </div>
