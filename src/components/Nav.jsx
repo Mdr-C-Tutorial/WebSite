@@ -44,9 +44,15 @@ function Nav() {
             </div>
             <div className="Nav-Right">
                 {
-                    isLogged ? <p className="Logged-In">{username}</p> : (<p className="Log-In" onClick={function () {
-                        window.location.href = "/login"
-                    }}>Log In</p>)
+                    isLogged ? (
+                        <Link to="/profile" className="LoggedIn">
+                            <p className="LoggedIn">{username}</p>
+                        </Link>
+                    ) : (
+                        <Link to="/login" className="LogIn">
+                            <p className="LogIn">Log In</p>
+                        </Link>
+                    )
                 }
                 <div className="Website">
                     <div className="WebsiteListContainer">

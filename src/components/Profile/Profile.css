@@ -3,3 +3,108 @@
     display: flex;
     flex-direction: column;
 }
+
+.Profile .ProfileContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 10vw);
+}
+
+.Profile .ProfileContent .ProfileLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    margin-right: 5vw;
+}
+
+.Profile .ProfileContent .ProfileLeft h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 6vw;
+    line-height: 7vw;
+    font-weight: 900;
+}
+
+.Profile .ProfileContent .ProfileLeft p {
+    color: #444;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1vw;
+    margin-right: 1vw;
+}
+
+.Profile .ProfileContent .ProfileLeft h1.Admin {
+    color: #b93f3f;
+}
+
+.Profile .ProfileContent .ProfileLeft h1.User {
+    color: #663399;
+}
+
+.Profile .ProfileContent .ProfileRight {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    border-left: 1px solid #555;
+    padding-left: 4vw;
+}
+
+.Profile .ProfileContent .ProfileRight div {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+}
+
+.Profile .ProfileContent .ProfileRight div p {
+    width: 13vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vw;
+    font-weight: 500;
+    color: rebeccapurple;
+}
+
+.Profile .ProfileContent .ProfileRight div span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5vw;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.3vw;
+    line-height: 1.5vw;
+    color: #222;
+    margin-right: 2vw;
+    margin-bottom: .5vw;
+}
+
+.Profile .ProfileContent .ProfileRight>button {
+    margin-top: 1vw;
+    padding: .5vw 1.3vw;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3vw;
+    font-weight: 400;
+    color: #fff;
+    background-color: rebeccapurple;
+    border: none;
+    border-radius: 0.5vw;
+    transition: all 0.3s;
+}
+
+.Profile .ProfileContent .ProfileRight>button:hover {
+    background-color: #371b54;
+}
+
+.Profile .ProfileContent .ProfileRight .Verified {
+    color: green;
+}
+
+.Profile .ProfileContent .ProfileRight .NotVerified {
+    color: red;
+    transition: all .3s;
+}
+
+.Profile .ProfileContent .ProfileRight .NotVerified:hover {
+    color: darkred;
+}

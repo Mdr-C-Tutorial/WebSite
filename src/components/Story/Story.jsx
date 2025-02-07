@@ -2,7 +2,7 @@ import './Story.css'
 
 function Story() {
     return (
-        <div className="story"></div>
+        <div className="Story"></div>
     )
 }
 
