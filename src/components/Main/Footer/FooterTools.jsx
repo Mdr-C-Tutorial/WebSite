@@ -13,7 +13,11 @@ function FooterTools() {
                     <p>Visual Studio Code</p>
                 </Link>
                 <Link to={"https://www.cursor.com/"} target="_blank">
-                <p>Cursor</p></Link>
+                    <p>Cursor</p>
+                </Link>
+                <Link to={"https://codeium.com/windsurf"} target="_blank">
+                    <p>Windsurf</p>
+                </Link>
             </div>
         </footer>
     )

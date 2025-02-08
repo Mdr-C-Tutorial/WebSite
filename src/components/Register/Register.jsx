@@ -5,6 +5,7 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 import { BsChevronDoubleUp, BsChevronDoubleDown } from "react-icons/bs";
 import { BiErrorAlt } from "react-icons/bi";
 import ReturnMainPage from "../mess/ReturnMainPage";
+import { host } from "../../mdr.config";
 
 const Register = () => {
     const [username, setUsername] = useState("");
@@ -61,8 +62,7 @@ const Register = () => {
             setEmailValid(-1);
         }
     };
-
-    const url = "/login"
+    const url = host + '/register'
     useEffect(() => {
         document.title = "Register | Mdr-C-Tutorial";
     }, []);
@@ -74,8 +74,21 @@ const Register = () => {
         }
         if (usernameValid !== 1 || passwordValid !== 1 || emailValid !== 1) return;
 
-
-        // axios. .....
+        // 发送注册请求到后端
+        fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password, email }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                if (data.success) {
+                    window.location.href = "/registered";
+                } else {
+                    alert("Failed to register. Please try again later.")
+                }
+            })
+            .catch((error) => console.error("Error:", error));
     };
 
     return (

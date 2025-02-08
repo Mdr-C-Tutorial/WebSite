@@ -2,7 +2,9 @@ import './GroupLeft.css'
 
 function GroupLeft() {
     return (
-        <div className="GroupLeft"></div>
+        <div className="GroupLeft">
+
+        </div>
     )
 }
 

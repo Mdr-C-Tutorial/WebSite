@@ -20,3 +20,7 @@ p {
 hr {
   color: #bbb !important;
 }
+
+iframe {
+  border: none;
+}
