@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Register.css";
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { BsChevronDoubleUp, BsChevronDoubleDown } from "react-icons/bs";
@@ -69,9 +70,10 @@ const Register = () => {
     const register = (e) => {
         e.preventDefault();
         if (password !== passwordConfirm) {
-
-
+            return;
         }
+        if (usernameValid !== 1 || passwordValid !== 1 || emailValid !== 1) return;
+
 
         // axios. .....
     };
@@ -84,7 +86,7 @@ const Register = () => {
                     <h1>Register</h1>
                     <form onSubmit={register} spellCheck={false}>
                         <label>
-                            Username:
+                            <h2>Username:</h2>
                             <input
                                 type="text"
                                 value={username}
@@ -99,7 +101,7 @@ const Register = () => {
                             </div>
                         </label>
                         <label>
-                            Password:
+                            <h2>Password:</h2>
                             <input
                                 type="password"
                                 value={password}
@@ -115,7 +117,7 @@ const Register = () => {
                             </div>
                         </label>
                         <label>
-                            Password Again:
+                            <h2>Password Again:</h2>
                             <input
                                 type="password"
                                 value={passwordConfirm}
@@ -127,7 +129,7 @@ const Register = () => {
                             </div>
                         </label>
                         <label>
-                            Email:
+                            <h2>Email:</h2>
                             <input
                                 type="text"
                                 value={email}
@@ -140,7 +142,7 @@ const Register = () => {
                             </div>
                         </label>
                         <button type="submit">Register</button>
-                        <a href={url}>已有账号？前去登录</a>
+                        <Link to={url}>Already had accounts? <span>Log in</span></Link>
                     </form>
                 </div>
             </div>

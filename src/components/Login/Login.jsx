@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 import ReturnMainPage from "../mess/ReturnMainPage";
 import { host } from "../../mdr.config";
@@ -41,7 +42,7 @@ const Login = () => {
                     <h1>Log&nbsp; &nbsp;In</h1>
                     <form onSubmit={login}>
                         <label>
-                            Email:
+                            <h2>Email:</h2>
                             <input
                                 type="text"
                                 value={username}
@@ -50,7 +51,7 @@ const Login = () => {
                             />
                         </label>
                         <label>
-                            Password:
+                            <h2>Password:</h2>
                             <input
                                 type="password"
                                 value={password}
@@ -59,7 +60,6 @@ const Login = () => {
                             />
                         </label>
                         <div>
-
                             <div className="Remember">
                                 <p>Remember me?</p>
                                 <label>
@@ -72,7 +72,7 @@ const Login = () => {
                             </div>
                             <button type="submit">Log in</button>
                         </div>
-                        <a href={url}>还没账号？前去注册</a>
+                        <Link to={url}>Haven't Got an account? <span>Register</span></Link>
                     </form>
                 </div>
             </div>

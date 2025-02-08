@@ -13,10 +13,10 @@ function Profile() {
     //test data
     const data = {
         username: "mdr",
-        userid: "1",
+        userid: "0001",
         email: "2972853299@qq.com",
-        emailVerified: false,
-        role: "user",
+        emailVerified: true,
+        role: "admin",
     }
     return (
         <div className="Profile">

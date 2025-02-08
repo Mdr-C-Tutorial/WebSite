@@ -1,11 +1,13 @@
 import './Nav.css';
-import { FaChevronDown, FaGithub, FaRegFileCode } from "react-icons/fa";
-import { PiChatsBold } from "react-icons/pi";
+import { FaChevronDown } from "react-icons/fa";
+import { GiDiscussion } from "react-icons/gi";
+import { BsDropletHalf } from "react-icons/bs";
 import Search from "./Nav/Search";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { host } from '../mdr.config';
 import PropTypes from 'prop-types';
+import { LuFileCode } from 'react-icons/lu';
 
 function Nav() {
     const [isLogged, setIsLogged] = useState(false);
@@ -70,13 +72,13 @@ function Nav() {
                     </div>
                 </div>
                 <Link to="/discussion" target={"_blank"}>
-                    <PiChatsBold className="Nav-Icon Icon-Link" />
+                    <GiDiscussion className="Nav-Icon Icon-Link" />
                 </Link>
                 <Link to="https://github.com/Mdr-C-Tutorial/C" target={"_blank"}>
-                    <FaGithub className="Nav-Icon Icon-Link" />
+                    <BsDropletHalf className="Nav-Icon Icon-Link" />
                 </Link>
                 <Link to="https://github.com/Mdr-C-Tutorial/Website" target={"_blank"}>
-                    <FaRegFileCode className="Nav-Icon Icon-Link" />
+                    <LuFileCode className="Nav-Icon Icon-Link" />
                 </Link>
             </div>
         </div>

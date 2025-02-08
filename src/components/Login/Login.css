@@ -42,15 +42,19 @@
 }
 
 .LoginMain label {
+    display: block;
+}
+
+.LoginMain label h2 {
     color: #000000;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 1.4vw;
-    display: block;
 }
 
-.LoginMain input {
-    width: 100%;
+.LoginMain input[type="text"],
+.LoginMain input[type="password"] {
+    width: 23vw;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -70,20 +74,43 @@
 }
 
 .LoginMain button:hover {
-    background-color: darkviolet;
+    background-color: #2b124d;
 }
 
 .LoginMain .Remember {
     display: flex;
-    font-display: row;
+    flex-direction: row;
     justify-content: start;
-    align-items: end;
+    align-items: center;
     gap: .5vw;
 }
 
 .LoginMain .Remember p {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1vw;
+    font-size: .95vw;
+    color: rebeccapurple;
     line-height: 2vw;
-    color: #444;
+}
+
+.LoginMain a {
+    color: #472073;
+    font-size: .9vw;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.LoginMain a:hover {
+    color: #2b124d;
+}
+
+.LoginMain a span {
+    color: #7e51a6;
+    font-weight: 900;
+    font-size: 1vw;
+    transition: all 0.3s;
+}
+
+.LoginMain a:hover span {
+    color: #472073;
 }
