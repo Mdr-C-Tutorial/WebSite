@@ -22,9 +22,22 @@
 
 .Profile .ProfileContent .ProfileLeft h1 {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 6vw;
-    line-height: 7vw;
     font-weight: 900;
+}
+
+.Profile .ProfileContent .ProfileLeft h1.Long {
+    font-size: 4vw;
+    line-height: 5vw;
+}
+
+.Profile .ProfileContent .ProfileLeft h1.Medium {
+    font-size: 5.5vw;
+    line-height: 6.5vw;
+}
+
+.Profile .ProfileContent .ProfileLeft h1.Short {
+    font-size: 6.5vw;
+    line-height: 7.5vw;
 }
 
 .Profile .ProfileContent .ProfileLeft p {

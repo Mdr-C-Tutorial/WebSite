@@ -11,7 +11,7 @@ function Search() {
                 if (param != "") {
                     window.location.href = '/search/' + param;
                 }
-            }} className="Search-button" />
+            }} className="Searchbutton" />
         </div>
     )
 }

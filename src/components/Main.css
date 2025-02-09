@@ -3,35 +3,35 @@
     overflow: hidden;
 }
 
-.Main .Main-Top {
+.Main .MainTop {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 3vw;
 }
 
-.Main .Main-Top #Title-1,
-.Main .Main-Top #Title-2,
-.Main .Main-Top #Title-3 {
+.Main .MainTop #Title1,
+.Main .MainTop #Title2,
+.Main .MainTop #Title3 {
     font-family: "Poppins", sans-serif;
     font-size: 5vw;
     line-height: 5.5vw;
 }
 
-.Main .Main-Top #Title-1 {
+.Main .MainTop #Title1 {
     font-weight: 300;
 }
 
-.Main .Main-Top #Title-2 {
+.Main .MainTop #Title2 {
     color: rebeccapurple;
     font-weight: 500;
 }
 
-.Main .Main-Top #Title-3 {
+.Main .MainTop #Title3 {
     font-weight: 700;
 }
 
-.Main .Main-Top #Subtitle {
+.Main .MainTop #Subtitle {
     font-family: "Poppins", sans-serif;
     font-size: 2vw;
     font-weight: 300;

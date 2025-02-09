@@ -18,3 +18,10 @@
     width: calc(100% - 6vw);
     padding: 3vw;
 }
+
+.Footer>p span {
+    font-weight: 500;
+    font-size: 3vw;
+    color: #1a0b30;
+    margin-left: .3vw;
+}

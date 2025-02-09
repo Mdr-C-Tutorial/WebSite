@@ -18,6 +18,9 @@ function FooterTools() {
                 <Link to={"https://codeium.com/windsurf"} target="_blank">
                     <p>Windsurf</p>
                 </Link>
+                <Link to={"https://trae.ai/"} target="_blank">
+                    <p>Trae</p>
+                </Link>
             </div>
         </footer>
     )

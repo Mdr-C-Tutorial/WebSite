@@ -6,47 +6,47 @@
     margin-top: 1vw;
 }
 
-.Nav-Left,
-.Nav-Right {
+.NavLeft,
+.NavRight {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.Nav-Right {
+.NavRight {
     margin-right: 3vw;
     gap: 2.5vw;
 }
 
-.Nav-Right .LogIn,
-.Nav-Right .LoggedIn,
-.Nav-Right .Website p {
+.NavRight .LogIn,
+.NavRight .LoggedIn,
+.NavRight .Website p {
     display: inline;
     font-family: "Poppins", serif;
     font-size: 1.5vw;
     transition: all 0.2s;
 }
 
-.Nav-Right .LogIn:hover,
-.Nav-Right .LoggedIn:hover {
-    color: #371b54;
+.NavRight .LogIn:hover,
+.NavRight .LoggedIn:hover {
+    color: #2b124d;
 }
 
-.Nav-Right .Website {
+.NavRight .Website {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.Nav-Right .Website #ChevronDown {
+.NavRight .Website #ChevronDown {
     transition: all .5s;
 }
 
-.Nav-Right .Website .WebsiteListContainer {
+.NavRight .Website .WebsiteListContainer {
     position: relative;
 }
 
-.Nav-Right .Website .WebsiteList {
+.NavRight .Website .WebsiteList {
     position: absolute;
     width: 20vw;
     top: 1.3vw;
@@ -57,19 +57,19 @@
     flex-direction: column;
 }
 
-.Nav-Right .Website .WebsiteChevronDownWrapper {
+.NavRight .Website .WebsiteChevronDownWrapper {
     font-size: 1vw;
 }
 
-.Nav-Right .Website:hover #ChevronDown {
+.NavRight .Website:hover #ChevronDown {
     transform: rotate(180deg);
 }
 
-.Nav-Right .Website:hover .WebsiteList {
+.NavRight .Website:hover .WebsiteList {
     height: 20vw;
 }
 
-.Nav-Right .Website .WebsiteList a {
+.NavRight .Website .WebsiteList a {
     color: black;
     font-family: 'Poppins', sans-serif;
     font-size: 1.3vw;
@@ -77,15 +77,15 @@
     transition: color 0.3s;
 }
 
-.Nav-Right .Website .WebsiteList a:hover {
+.NavRight .Website .WebsiteList a:hover {
     color: rebeccapurple;
 }
 
-.Nav-Right .Logged-In {
+.NavRight .LoggedIn {
     color: rebeccapurple;
 }
 
-.Nav-Left .Nav-Left-Title {
+.NavLeft .NavLeftTitle {
     margin-left: 3vw;
     margin-right: 5vw;
     font-size: 2vw;
@@ -94,17 +94,17 @@
     color: rebeccapurple;
 }
 
-.Nav-Right>a {
+.NavRight>a {
     font-size: 2vw;
 }
 
-.Nav-Icon {
+.NavIcon {
     width: 2vw;
     height: 2vw;
     font-size: 2vw;
     transition: all 2s cubic-bezier(0.5, 0.01, 0.9, .1);
 }
 
-.Nav-Icon:hover {
+.NavIcon:hover {
     transform: rotate(-1440deg);
 }

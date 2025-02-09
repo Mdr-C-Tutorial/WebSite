@@ -13,7 +13,7 @@ function Profile() {
     //test data
     const data = {
         username: "mdr",
-        userid: "0001",
+        userid: "1",
         email: "2972853299@qq.com",
         emailVerified: true,
         role: "admin",
@@ -23,7 +23,14 @@ function Profile() {
             <ReturnMainPage />
             <div className="ProfileContent">
                 <div className="ProfileLeft">
-                    <h1 className={data.role === "admin" ? "Admin" : "User"}>{data.username}</h1>
+                    <h1 className={
+                        [
+                            data.role === "admin" ? "Admin" : "User",
+                            data.username.length > 10 ? "Long" :
+                                data.username.length > 5 ? "Medium" :
+                                    "Short",
+                        ].join(" ")
+                    }>{data.username}</h1>
                     <p>id: {data.userid}</p>
                 </div>
                 <div className="ProfileRight">
