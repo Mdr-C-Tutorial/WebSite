@@ -1,14 +1,12 @@
-import { FaRegWindowMaximize } from 'react-icons/fa6';
 import './GroupLeft.css'
-import { IoMdClose } from 'react-icons/io';
-import { VscChromeClose, VscChromeMaximize, VscChromeMinimize, VscFileSymlinkDirectory } from 'react-icons/vsc';
-import { MdKeyboardVoice, MdOutlineLocalPhone } from 'react-icons/md';
+import { VscChromeClose, VscChromeMaximize, VscChromeMinimize } from 'react-icons/vsc';
+import { MdOutlineLocalPhone } from 'react-icons/md';
 import { HiOutlineDotsHorizontal } from 'react-icons/hi';
 import { TbMessageCirclePlus } from 'react-icons/tb';
 import { BsEmojiSmile } from 'react-icons/bs';
-import { GoFileDirectory, GoFileSymlinkFile } from 'react-icons/go';
+import { GoFileSymlinkFile } from 'react-icons/go';
 import { SlPicture } from 'react-icons/sl';
-import { LuClock3, LuFileInput } from 'react-icons/lu';
+import { LuClock3 } from 'react-icons/lu';
 import { RxAvatar } from 'react-icons/rx';
 
 function GroupLeft() {

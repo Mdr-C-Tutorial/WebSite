@@ -9,6 +9,7 @@ function UDE() {
             </div>
             <div className="Right">
                 <h1>UDE</h1>
+                <p style={{ marginLeft: '.5vw' }}>Not yet implemented.</p>
             </div>
         </div>
     )
