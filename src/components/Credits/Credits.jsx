@@ -4,6 +4,10 @@ import { FaGithub } from "react-icons/fa";
 import { FaWifi, FaBilibili } from 'react-icons/fa6';
 import { IoLogoJavascript } from 'react-icons/io';
 import CreditsItem from './CreditsItem';
+import OrganizationCreditsItem from './OrganizationCreditsItem';
+import { MdContactPage } from 'react-icons/md';
+import { GiMusicalScore } from 'react-icons/gi';
+import { BsDatabaseDown } from 'react-icons/bs';
 
 function Credits() {
     document.title = "Credits | Mdr-C-Tutorial";
@@ -36,7 +40,14 @@ function Credits() {
             </div>
             <h2>Organizations</h2>
             <div className="Credits-Wrapper">
-
+                <OrganizationCreditsItem
+                    name="艾猫工作室"
+                    logo={<FaBilibili />}
+                    link={"https://www.aymao.com/"}
+                    links={[{ logo: <GiMusicalScore />, to: "https://m.aymao.com/" },
+                    { logo: <BsDatabaseDown />, to: "https://pan.aymao.com/" }
+                    ]}
+                />
             </div>
             <h2>Special</h2>
             <div className="Credits-Wrapper">

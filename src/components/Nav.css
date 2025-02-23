@@ -18,6 +18,11 @@
     gap: 2.5vw;
 }
 
+.NavRight a {
+    text-decoration: none;
+    color: #663399;
+}
+
 .NavRight .LogIn,
 .NavRight .LoggedIn,
 .NavRight .Website p {
