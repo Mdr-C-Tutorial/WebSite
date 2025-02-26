@@ -28,7 +28,7 @@ function Profile() {
                     const data = await response.json();
                     setUserData(data);
                 } else {
-                    setError('无法获取用户信息，请重新登录');
+                    setError('Please login again to access user information');
                     let count = 3;
                     setCountdown(count);
                     const timer = setInterval(() => {
@@ -41,7 +41,7 @@ function Profile() {
                     }, 1000);
                 }
             } catch (error) {
-                setError('网络错误，请稍后重试');
+                setError('Network error');
                 let count = 3;
                 setCountdown(count);
                 const timer = setInterval(() => {
@@ -69,7 +69,7 @@ function Profile() {
             <div className="Profile">
                 <div className="ProfileError">
                     <p>{error}</p>
-                    <p>{countdown} 秒后跳转到登录页面...</p>
+                    <p>Redirecting to login page in {countdown} seconds...</p>
                 </div>
             </div>
         );
