@@ -3,6 +3,21 @@
     display: flex;
     flex-direction: column;
 }
+
+.Profile p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.Profile>p {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+    color: #666;
+    font-weight: 200;
+}
+
 .Profile .ProfileError {
     display: flex;
     flex-direction: column;
@@ -14,14 +29,15 @@
 
 .Profile .ProfileError p {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.2rem;
+    font-size: 2vw;
     color: #ff4444;
 }
 
 .Profile .ProfileError p:last-child {
     color: #666;
-    font-size: 1rem;
+    font-size: 1vw;
 }
+
 .Profile .ProfileContent {
     display: flex;
     flex-direction: row;
@@ -29,6 +45,7 @@
     justify-content: center;
     height: calc(100vh - 10vw);
 }
+
 .Profile .ProfileContent .ProfileLeft {
     display: flex;
     flex-direction: column;
@@ -36,37 +53,45 @@
     justify-content: center;
     margin-right: 5vw;
 }
+
 .Profile .ProfileContent .ProfileLeft h1 {
     font-family: 'JetBrains Mono', monospace;
     font-weight: 900;
 }
+
 .Profile .ProfileContent .ProfileLeft h1.Long {
     font-size: 4vw;
     line-height: 5vw;
 }
+
 .Profile .ProfileContent .ProfileLeft h1.Medium {
     font-size: 5.5vw;
     line-height: 6.5vw;
 }
+
 .Profile .ProfileContent .ProfileLeft h1.Short {
     font-size: 6.5vw;
     line-height: 7.5vw;
 }
+
 .Profile .ProfileContent .ProfileLeft p {
     color: #444;
     font-family: 'JetBrains Mono', monospace;
     font-size: 1.1vw;
     margin-right: 1vw;
 }
+
 .Profile .ProfileContent .ProfileLeft h1.Admin {
     text-shadow: 3vw 3vw 6vw #66339966;
     background: linear-gradient(90deg, #663399 0%, #250e3d 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 .Profile .ProfileContent .ProfileLeft h1.User {
     color: #663399;
 }
+
 .Profile .ProfileContent .ProfileRight {
     display: flex;
     flex-direction: column;
@@ -75,12 +100,14 @@
     border-left: 1px solid #555;
     padding-left: 4vw;
 }
+
 .Profile .ProfileContent .ProfileRight div {
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: end;
 }
+
 .Profile .ProfileContent .ProfileRight div p {
     width: 13vw;
     font-family: 'Poppins', sans-serif;
@@ -88,6 +115,7 @@
     font-weight: 500;
     color: rebeccapurple;
 }
+
 .Profile .ProfileContent .ProfileRight div span {
     display: flex;
     flex-direction: row;
@@ -100,6 +128,7 @@
     margin-right: 2vw;
     margin-bottom: .5vw;
 }
+
 .Profile .ProfileContent .ProfileRight>button {
     margin-top: 1vw;
     padding: .5vw 1.3vw;
@@ -112,16 +141,20 @@
     border-radius: 0.5vw;
     transition: all 0.3s;
 }
+
 .Profile .ProfileContent .ProfileRight>button:hover {
     background-color: #371b54;
 }
+
 .Profile .ProfileContent .ProfileRight .Verified {
     color: green;
 }
+
 .Profile .ProfileContent .ProfileRight .NotVerified {
     color: red;
     transition: all .3s;
 }
+
 .Profile .ProfileContent .ProfileRight .NotVerified:hover {
     color: darkred;
 }

@@ -1,0 +1,126 @@
+.FeedBack {
+    margin: 1vw 3vw;
+    min-height: 90vh;
+}
+
+.FeedbackEditor {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+
+.FeedbackEditor h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4vw;
+    font-weight: 800;
+    color: rebeccapurple;
+}
+
+.FeedbackEditor button {
+    margin-top: 1vw;
+    align-self: flex-end;
+    padding: 0.8vw 2vw;
+    border: none;
+    border-radius: 0.5vw;
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 1.2vw;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.FeedbackEditor button:hover {
+    background-color: #4a2b7c;
+}
+
+.FeedbackEditor textarea {
+    height: 60vh;
+    padding: 1vw;
+    border: 1px solid #ccc;
+    border-radius: 0.5vw;
+    font-size: 1.1vw;
+    font-family: 'Jetbrains Mono', monospace;
+    resize: none;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.FeedbackEditor textarea:focus {
+    border-color: rebeccapurple;
+    box-shadow: 0 0 5px rgba(102, 51, 153, 0.3);
+}
+
+.FeedbackLoading {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FeedbackLoading h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vw;
+    color: #666;
+    font-weight: 200;
+}
+
+.FeedbackLogin {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+.FeedbackLogin h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vw;
+    color: rebeccapurple;
+    font-weight: 400;
+}
+
+.ButtonGroup {
+    display: flex;
+    gap: 1vw;
+}
+
+.ButtonGroup button,
+.ButtonGroup a {
+    font-family: 'Poppins', sans-serif;
+}
+
+.ButtonGroup .Primary {
+    padding: 0.8vw 2vw;
+    border: none;
+    border-radius: 0.5vw;
+    background-color: rebeccapurple;
+    color: white;
+    font-size: 1.2vw;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.ButtonGroup .Primary:hover {
+    background-color: #4a2b7c;
+}
+
+.ButtonGroup .Secondary {
+    padding: 0.8vw 2vw;
+    border: 1px solid #ccc;
+    border-radius: 0.5vw;
+    background-color: white;
+    color: #555;
+    font-size: 1.2vw;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.ButtonGroup .Secondary:hover {
+    background-color: #f5f5f5;
+    border-color: #999;
+    color: #000;
+}
