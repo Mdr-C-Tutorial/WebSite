@@ -7,7 +7,7 @@ function FooterOthers() {
             <h1>Others</h1>
             <div style={{ marginLeft: ".5vw" }}>
                 <Link to={"/feedback"}>
-                    <p>Observations and recommendations</p>
+                    <p>Feedback</p>
                 </Link>
                 <Link to={"https://qm.qq.com/q/dt2eY9PE8o"} target="_blank">
                     <p>Contact Mdr</p>
