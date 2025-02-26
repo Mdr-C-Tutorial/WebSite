@@ -5,7 +5,6 @@ import { FaWifi, FaBilibili } from 'react-icons/fa6';
 import { IoLogoJavascript } from 'react-icons/io';
 import CreditsItem from './CreditsItem';
 import OrganizationCreditsItem from './OrganizationCreditsItem';
-import { MdContactPage } from 'react-icons/md';
 import { GiMusicalScore } from 'react-icons/gi';
 import { BsDatabaseDown } from 'react-icons/bs';
 
@@ -37,6 +36,7 @@ function Credits() {
                 <CreditsItem name="神说" links={[]} />
                 <CreditsItem name="27Onion" links={[]} />
                 <CreditsItem name="左·岚" links={[{ logo: <FaBilibili />, to: "https://space.bilibili.com/27619688" }]} />
+                <CreditsItem name="猫球" links={[]} />
             </div>
             <h2>Organizations</h2>
             <div className="Credits-Wrapper">
@@ -44,8 +44,9 @@ function Credits() {
                     name="艾猫工作室"
                     logo={<FaBilibili />}
                     link={"https://www.aymao.com/"}
-                    links={[{ logo: <GiMusicalScore />, to: "https://m.aymao.com/" },
-                    { logo: <BsDatabaseDown />, to: "https://pan.aymao.com/" }
+                    links={[
+                        { logo: <GiMusicalScore />, to: "https://m.aymao.com/" },
+                        { logo: <BsDatabaseDown />, to: "https://pan.aymao.com/" }
                     ]}
                 />
             </div>
