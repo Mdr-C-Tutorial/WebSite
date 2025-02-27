@@ -19,7 +19,7 @@ function Profile() {
 
         const fetchUserData = async () => {
             try {
-                const response = await fetch(`${host}/profile`, {
+                const response = await fetch(`${host}/api/auth/login`, {
                     method: 'GET',
                     credentials: 'include',
                 });
@@ -60,6 +60,15 @@ function Profile() {
         fetchUserData();
     }, [navigate]);
 
+    const logOut = () => {
+        fetch(`${host}/api/auth/logout`, {
+            method: 'DELETE',
+            credentials: 'include',
+        }).then(() => {
+            navigate('/');
+        });
+    }
+
     if (loading) {
         return <div className="Profile"><p>Loading...</p></div>;
     }
@@ -86,33 +95,33 @@ function Profile() {
                 <div className="ProfileLeft">
                     <h1 className={
                         [
-                            userData.role === "admin" ? "Admin" : "User",
-                            userData.username.length > 10 ? "Long" :
-                                userData.username.length > 5 ? "Medium" :
+                            userData.user.role === "admin" ? "Admin" : "User",
+                            userData.user.username.length > 10 ? "Long" :
+                                userData.user.username.length > 5 ? "Medium" :
                                     "Short",
                         ].join(" ")
-                    }>{userData.username}</h1>
-                    <p>id: {userData.userid}</p>
+                    }>{userData.user.username}</h1>
+                    <p>id: {userData.user.id}</p>
                 </div>
                 <div className="ProfileRight">
                     <div>
                         <p>Username :</p>
-                        <span>{userData.username}<FaRegEdit /></span>
+                        <span>{userData.user.username}<FaRegEdit /></span>
                     </div>
                     <div>
                         <p>Role :</p>
-                        <span>{userData.role}</span>
+                        <span>{userData.user.role}</span>
                     </div>
                     <div>
                         <p>Email :</p>
-                        <span>{userData.email}</span>
+                        <span>{userData.user.email}</span>
                         {
                             userData.emailVerified ?
                                 <span className="Verified"><CiCircleCheck />Verified</span> :
                                 <span className="NotVerified">To Verify<GoArrowRight /></span>
                         }
                     </div>
-                    <button>Log Out</button>
+                    <button onClick={logOut}>Log Out</button>
                 </div>
             </div>
         </div>

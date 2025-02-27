@@ -14,24 +14,28 @@ const Login = () => {
         document.title = "Login | Mdr-C-Tutorial";
     }, []);
 
-    const login = (e) => {
+    const login = async (e) => {
         e.preventDefault();
-        // url host+"/login"
-        fetch(host + "/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ username, password, remember }),
-        }).then((response) => {
+        try {
+            const response = await fetch(host + "/api/auth/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                credentials: 'include',
+                body: JSON.stringify({ username, password, remember }),
+            });
+            const data = await response.json();
+            
             if (response.ok) {
                 window.location.href = "/";
             } else {
-                alert("登录失败");
+                alert("登录失败：" + data.error);
             }
-        }).catch((error) => {
+        } catch (error) {
             console.error("Error:", error);
-        });
+            alert("登录失败：网络错误");
+        }
     };
 
     return (

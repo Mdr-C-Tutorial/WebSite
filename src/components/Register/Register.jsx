@@ -62,7 +62,7 @@ const Register = () => {
             setEmailValid(-1);
         }
     };
-    const url = host + '/register'
+    const url = host + '/api/auth/register'
     useEffect(() => {
         document.title = "Register | Mdr-C-Tutorial";
     }, []);
@@ -85,7 +85,7 @@ const Register = () => {
                 if (data.success) {
                     window.location.href = "/registered";
                 } else {
-                    alert("Failed to register. Please try again later.")
+                    alert("Failed to register: " + data.error)
                 }
             })
             .catch((error) => console.error("Error:", error));

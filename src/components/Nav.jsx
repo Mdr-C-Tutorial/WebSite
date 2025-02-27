@@ -16,15 +16,16 @@ function Nav() {
     useEffect(() => {
         const checkAuth = async () => {
             try {
-                const response = await fetch(host + '/login', {
+                const response = await fetch(host + '/api/auth/login', {
                     method: 'GET',
                     credentials: 'include', // 允许发送和接收 Cookie
                 });
 
                 if (response.ok) {
                     const data = await response.json();
+                    console.log(data)
                     setIsLogged(true);
-                    setUsername(data.userName);
+                    setUsername(data.user.username);
                 } else {
                     setIsLogged(false);
                 }
