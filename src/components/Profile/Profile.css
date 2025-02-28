@@ -158,3 +158,29 @@
 .Profile .ProfileContent .ProfileRight .NotVerified:hover {
     color: darkred;
 }
+.UsernameEdit {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.UsernameInput {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1vw;
+    padding: 0.2vw 0;
+    width: 10vw;
+}
+
+.UsernameEdit button {
+    border: none;
+    background: none;
+    color: #4CAF50;
+    cursor: pointer;
+    font-size: 1.2vw;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}

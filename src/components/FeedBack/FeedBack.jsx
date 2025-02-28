@@ -14,7 +14,7 @@ function FeedBack() {
         document.title = "Feedback | Mdr-C-Tutorial";
         const checkAuth = async () => {
             try {
-                const response = await fetch(`${host}/login`, {
+                const response = await fetch(`${host}/api/auth/login`, {
                     method: 'GET',
                     credentials: 'include',
                 });
@@ -31,7 +31,7 @@ function FeedBack() {
 
     const handleSubmit = async () => {
         try {
-            const response = await fetch(`${host}/feedback`, {
+            const response = await fetch(`${host}/api/feedback`, {
                 method: 'POST',
                 credentials: 'include',
                 headers: {

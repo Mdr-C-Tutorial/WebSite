@@ -1,0 +1,46 @@
+.UuidDotMatrix {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5vw;
+}
+
+.UuidLabel {
+    font-family: 'Jetbrains Mono', monospace;
+    font-size: 1vw;
+    margin-right: 0.5vw;
+    color: #555;
+}
+
+.UuidMatrixContainer {
+    display: flex;
+    align-items: center;
+    height: 0.75vw;
+}
+
+.UuidColumn {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0.05vw;
+}
+
+.UuidSeparator {
+    width: 0.25vw;
+}
+
+.UuidDot {
+    width: 0.15vw;
+    height: 0.15vw;
+    border-radius: 50%;
+    margin: 0.025vw 0;
+}
+
+.UuidDot.Active {
+    background-color: #555;
+}
+
+.UuidText {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8vw;
+    color: #555;
+    margin-top: 0.3vw;
+}

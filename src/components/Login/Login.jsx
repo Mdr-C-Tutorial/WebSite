@@ -69,8 +69,8 @@ const Login = () => {
                                 <label>
                                     <input
                                         type="checkbox"
-                                        value={remember}
-                                        onChange={(e) => setRemember(e.target.value)}
+                                        checked={remember}
+                                        onChange={(e) => setRemember(e.target.checked)}
                                     />
                                 </label>
                             </div>

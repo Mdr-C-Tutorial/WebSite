@@ -6,12 +6,15 @@ import { GoArrowRight } from "react-icons/go";
 import ReturnMainPage from '../mess/ReturnMainPage';
 import { host } from '../../mdr.config';
 import { useNavigate } from 'react-router-dom';
+import UuidDotMatrix from './UuidDotMatrix';
 
 function Profile() {
     const [userData, setUserData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [countdown, setCountdown] = useState(3);
+    const [isEditing, setIsEditing] = useState(false);
+    const [newUsername, setNewUsername] = useState('');
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -27,6 +30,7 @@ function Profile() {
                 if (response.ok) {
                     const data = await response.json();
                     setUserData(data);
+                    setNewUsername(data.user.username);
                 } else {
                     setError('Please login again to access user information');
                     let count = 3;
@@ -88,6 +92,32 @@ function Profile() {
         return null;
     }
 
+    const handleEditUsername = () => {
+        setIsEditing(true);
+    };
+
+    const handleUpdateUsername = async () => {
+        try {
+            const response = await fetch(`${host}/api/user/${userData.user.id}`, {
+                method: 'PATCH',
+                credentials: 'include',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username: newUsername }),
+            });
+
+            if (response.ok) {
+                window.location.reload();
+            } else {
+                const error = await response.json();
+                alert(error.message);
+            }
+        } catch (error) {
+            console.error(error);
+            alert('Network error');
+        }
+    };
     return (
         <div className="Profile">
             <ReturnMainPage />
@@ -101,12 +131,24 @@ function Profile() {
                                     "Short",
                         ].join(" ")
                     }>{userData.user.username}</h1>
-                    <p>id: {userData.user.id}</p>
+                    <UuidDotMatrix uuid={userData.user.id} />
                 </div>
                 <div className="ProfileRight">
                     <div>
                         <p>Username :</p>
-                        <span>{userData.user.username}<FaRegEdit /></span>
+                        {isEditing ? (
+                            <span className="UsernameEdit">
+                                <input
+                                    type="text"
+                                    value={newUsername}
+                                    onChange={(e) => setNewUsername(e.target.value)}
+                                    className="UsernameInput"
+                                />
+                                <button onClick={handleUpdateUsername}>✓</button>
+                            </span>
+                        ) : (
+                            <span>{userData.user.username}<FaRegEdit onClick={handleEditUsername} /></span>
+                        )}
                     </div>
                     <div>
                         <p>Role :</p>

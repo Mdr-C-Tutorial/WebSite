@@ -32,6 +32,11 @@
     transition: all 0.2s;
 }
 
+.NavRight .LogIn,
+.NavRight .LoggedIn {
+    margin-top: 0.1vw;
+}
+
 .NavRight .LogIn:hover,
 .NavRight .LoggedIn:hover {
     color: #2b124d;
