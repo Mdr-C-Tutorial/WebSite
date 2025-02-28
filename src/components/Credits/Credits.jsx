@@ -6,6 +6,7 @@ import { IoLogoJavascript } from 'react-icons/io';
 import CreditsItem from './CreditsItem';
 import OrganizationCreditsItem from './OrganizationCreditsItem';
 import { GiMusicalScore } from 'react-icons/gi';
+import { SiCsdn } from "react-icons/si";
 import { BsDatabaseDown } from 'react-icons/bs';
 
 function Credits() {
@@ -37,6 +38,8 @@ function Credits() {
                 <CreditsItem name="27Onion" links={[]} />
                 <CreditsItem name="左·岚" links={[{ logo: <FaBilibili />, to: "https://space.bilibili.com/27619688" }]} />
                 <CreditsItem name="猫球" links={[]} />
+                <CreditsItem name="333" links={[]} />
+                <CreditsItem name="Lucifer" links={[{ logo: <FaGithub />, to: "https://github.com/9lucifer" }, { logo: <SiCsdn />, to: "https://blog.csdn.net/dhrmt/" }]} />
             </div>
             <h2>Organizations</h2>
             <div className="Credits-Wrapper">
