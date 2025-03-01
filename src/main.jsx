@@ -25,6 +25,7 @@ import Concurrent from './components/Tutorial/Concurrent/Concurrent';
 import Register from './components/Register/Register';
 import Registered from './components/Registered/Registered';
 import Profile from './components/Profile/Profile';
+import Guide from './components/Guide/Guide';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -45,6 +46,7 @@ root.render(
         <Route path="/about" element={<About />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/search/:name" element={<SearchPage />} />
+        <Route path="/guide/*" element={<Guide />} />
         <Route path="/tutorial/01/:id" element={<HelloWorld />} />
         <Route path="/tutorial/02/:id" element={<Numbers />} />
         <Route path="/tutorial/03/:id" element={<Statements />} />

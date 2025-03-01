@@ -1,0 +1,38 @@
+.CodeRunner {
+    position: fixed;
+    right: calc(2.5vw + 2vw);
+    width: 45vw;
+    background: white;
+    border: 0.05vw solid #ddd;
+    border-radius: 0.2vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0.1vw 0.4vw rgba(0,0,0,0.1);
+}
+
+.RunnerToolbar {
+    display: flex;
+    padding: 0.1vw 1vw;
+    border-bottom: 0.05vw solid #ddd;
+}
+.StdinInput {
+    flex: 1;
+    padding: 0.5vw;
+    border: none;
+    background: transparent;
+    font-size: 1vw;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+
+.StdinInput:focus {
+    outline: none;
+}
+.RunnerOutput {
+    flex: 1;
+    padding: 0.5vw;
+    font-family: monospace;
+    background-color: #f5f5f5;
+    border: none;
+    font-size: 0.8vw;
+}

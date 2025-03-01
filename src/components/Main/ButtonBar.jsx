@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function ButtonBar() {
     return (
         <div className="Button-Bar">
-            <Link to={"/tutorial"}>
+            <Link to={"/guide"}>
                 <div id="Start-Button">
                     Start
                 </div>

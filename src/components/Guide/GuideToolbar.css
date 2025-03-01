@@ -1,0 +1,62 @@
+.GuideToolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw 0 0.5vw 0;
+    margin: 0;
+}
+
+.ChapterControls {
+    display: flex;
+    gap: 0.5vw;
+    align-items: center;
+}
+
+.ChapterButton {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 50%;
+    border: none;
+    background-color: rebeccapurple;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.ChapterButton svg {
+    width: 1vw;
+    height: 1vw;
+}
+
+.ChapterButton:hover:not(.Disabled) {
+    background-color: #663399;
+    transform: scale(1.1);
+}
+
+.ChapterButton.Disabled {
+    background-color: rgba(102, 51, 153, 0.5);
+    cursor: not-allowed;
+}
+
+.RevealAnswer {
+    padding: 0.5vw 1vw;
+    border-radius: 0.2vw;
+    font-size: 1.5vw;
+    border: none;
+    border-radius: 1.25vw;
+    background-color: rebeccapurple;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8vw;
+    height: 2.5vw;
+    transition: all 0.3s ease;
+    margin-right: 0.5vw;
+}
+
+.RevealAnswer:hover {
+    transform: scale(1.1);
+}
