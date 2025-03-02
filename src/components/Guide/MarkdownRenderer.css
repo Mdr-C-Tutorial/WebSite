@@ -1,0 +1,112 @@
+.MarkdownRenderer {
+  font-family: 'Poppins', sans-serif;
+}
+
+.CodeBlockWrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.InlineCode {
+    background-color: #f8f8f8;
+    padding: 0.1vw 0.3vw;
+    border-radius: 0.2vw;
+    font-family: 'Consolas', monospace;
+    font-size: 0.9vw;
+    border: 0.05vw solid #e0e0e0;
+    display: inline;
+    white-space: nowrap;
+}
+
+.InlineCode.keyword {
+  color: #0000ff;
+  font-weight: bold;
+}
+
+.InlineCode.preprocessor {
+  color: #a020f0; /* 紫色 */
+  font-weight: bold;
+}
+
+.InlineCode.library-function {
+  color: #008000; /* 绿色 */
+}
+
+.MarkdownH1 {
+  font-size: 1.5vw;
+  color: #333;
+  margin-bottom: 1.5vw;
+}
+
+.MarkdownH2 {
+  font-size: 1.2vw;
+  color: #444;
+  margin: 1vw 0;
+}
+
+.MarkdownH3 {
+  font-size: 1vw;
+  color: #555;
+  margin: 1vw 0 0.5vw 0;
+}
+
+.MarkdownP {
+  margin-bottom: 1vw;
+  line-height: 1.6;
+}
+
+.MarkdownUl, .MarkdownOl {
+  margin-bottom: 1vw;
+  padding-left: 1.5vw;
+}
+
+.MarkdownLi {
+  margin-bottom: 0.5vw;
+}
+/* 关键词高亮 */
+.keyword {
+    color: #0000ff;
+    font-weight: bold;
+}
+
+/* 预处理器指令高亮 */
+.preprocessor {
+    color: #663399; /* 紫色 */
+    font-weight: bold;
+}
+
+/* 注释高亮 */
+.comment {
+    color: #008000; /* 浅绿色 */
+    opacity: 0.8;
+}
+
+/* 字符串字面量和字符常量高亮 */
+.string {
+    color: #008000; /* 浅绿色 */
+    font-weight: bold;
+}
+
+/* 整数常量和浮点数常量高亮 */
+.number {
+    color: #881010; /* 红色 */
+    font-weight: bold;
+}
+
+/* 库函数高亮 */
+.library-function {
+    color: #8B0000; /* 暗红色 */
+}
+.InlineCode.keyword {
+    color: #0000ff;
+    font-weight: bold;
+}
+
+.InlineCode.preprocessor {
+    color: #a020f0;
+    font-weight: bold;
+}
+
+.InlineCode.library-function {
+    color: #008000;
+}

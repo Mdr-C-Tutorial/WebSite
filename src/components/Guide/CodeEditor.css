@@ -7,7 +7,7 @@
     border-radius: 0.2vw;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0.1vw 0.4vw rgba(0,0,0,0.1);
+    box-shadow: 0 0.1vw 0.4vw rgba(0, 0, 0, 0.1);
 }
 
 .EditorToolbar {
@@ -18,7 +18,8 @@
     position: relative;
 }
 
-.EditorSelector, .CompileArgs {
+.EditorSelector,
+.CompileArgs {
     outline: none;
     font-family: 'Poppins', sans-serif;
 }
@@ -43,4 +44,5 @@
     flex: 1;
     min-height: 30vh;
     overflow: hidden;
+    padding-top: 1vw;
 }

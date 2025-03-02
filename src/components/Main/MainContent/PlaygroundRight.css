@@ -1,5 +1,6 @@
 .PlaygroundRight {
-    height: 27vw;
+    height: 25vw;
+    padding-top: 2vw;
     width: 48vw;
     display: flex;
     flex-direction: row;

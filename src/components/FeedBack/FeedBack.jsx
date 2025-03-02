@@ -74,7 +74,12 @@ function FeedBack() {
                             onChange={(e) => setFeedbackContent(e.target.value)}
                             placeholder="请输入您的反馈内容..."
                         />
-                        <button onClick={handleSubmit}>Submit</button>
+                        <button
+                            onClick={handleSubmit}
+                            disabled={!feedbackContent.trim()}
+                        >
+                            Submit
+                        </button>
                     </div>
                 </>
             ) : (

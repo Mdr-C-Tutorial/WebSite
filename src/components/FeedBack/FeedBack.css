@@ -31,6 +31,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.FeedbackEditor button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 .FeedbackEditor button:hover {
     background-color: #4a2b7c;
 }

@@ -1,0 +1,26 @@
+.CodeBlock {
+    background: #f8f8f8;
+    border-radius: 0.2vw;
+    margin: 1vw 0;
+    overflow: hidden;
+    font-family: 'Consolas', monospace;
+    border: 0.05vw solid #e0e0e0;
+}
+
+.CodeHeader {
+    background: #f0f0f0;
+    padding: 0.5vw 1vw;
+    font-size: 0.8vw;
+    color: #555;
+    border-bottom: 0.05vw solid #ddd;
+}
+
+.CodeLanguage {
+    font-weight: bold;
+}
+
+.CodeContent {
+    margin: 0;
+    overflow-x: auto;
+    font-size: 0.9vw;
+}

@@ -49,7 +49,9 @@ function Nav() {
                 {
                     isLogged ? (
                         <Link to="/profile" className="LoggedIn">
-                            <p className="LoggedIn">{username}</p>
+                            <p className="LoggedIn">
+                                {username.length > 5 ? `${username.slice(0, 5)}...` : username}
+                            </p>
                         </Link>
                     ) : (
                         <Link to="/login" className="LogIn">

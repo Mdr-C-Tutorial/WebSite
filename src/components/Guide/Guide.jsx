@@ -15,6 +15,7 @@ import Chapter5 from './chapters/Chapter5';
 import { CodeProvider } from './context/CodeContext';
 import Chapter0 from './chapters/Chapter0';
 import Chapter6 from './chapters/Chapter6';
+
 const chapters = [
     { id: 0, title: "第0章：使用指南", progress: 0 },
     { id: 1, title: "第1章：Hello World", progress: 0 },
@@ -40,9 +41,9 @@ function Guide() {
                 <ReturnMainPage />
                 <div className="GuideContent">
                     <div className="TutorialSection">
-                        <GuideToolbar 
+                        <GuideToolbar
                             chapters={chapters}
-                            onChapterChange={handleChapterChange} 
+                            onChapterChange={handleChapterChange}
                         />
                         <div className="ChapterContent">
                             <Routes>

@@ -59,11 +59,12 @@ function GroupLeft() {
                 </div>
                 <div className="GroupLeftContentRight">
                     <div className="GroupLeftContentRightTop">
-                        <h6>群公告</h6>
-                        <p>请大家遵守群规，...</p>
+                        <h6>C23 更新</h6>
+                        <p>&lt;stdbit.h&gt;, attributes, ...</p>
                     </div>
                     <div className="GroupLeftContentRightBottom">
-                        <h6>群聊成员 100</h6>
+                        <h6>编译器消息</h6>
+                        <p>Clang v20.0 Released</p>
                     </div>
                 </div>
             </div>
