@@ -1,10 +1,8 @@
 .CodeBlock {
     background: #f8f8f8;
     border-radius: 0.2vw;
-    margin: 1vw 0;
     overflow: hidden;
     font-family: 'Consolas', monospace;
-    border: 0.05vw solid #e0e0e0;
 }
 
 .CodeHeader {
@@ -12,7 +10,6 @@
     padding: 0.5vw 1vw;
     font-size: 0.8vw;
     color: #555;
-    border-bottom: 0.05vw solid #ddd;
 }
 
 .CodeLanguage {

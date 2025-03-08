@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { FaRegEdit } from "react-icons/fa";
 import { CiCircleCheck } from "react-icons/ci";
 import { GoArrowRight } from "react-icons/go";
+import { GoArrowDown, GoArrowUp } from "react-icons/go";
 import ReturnMainPage from '../mess/ReturnMainPage';
 import { host } from '../../mdr.config';
 import { useNavigate } from 'react-router-dom';
@@ -144,7 +145,14 @@ function Profile() {
                                     onChange={(e) => setNewUsername(e.target.value)}
                                     className="UsernameInput"
                                 />
-                                <button onClick={handleUpdateUsername}>✓</button>
+                                <button 
+                                    onClick={handleUpdateUsername}
+                                    className={newUsername.length < 3 || newUsername.length > 18 ? 'invalid' : ''}
+                                    disabled={newUsername.length < 3 || newUsername.length > 18}
+                                >
+                                    {newUsername.length < 3 ? <GoArrowDown /> : 
+                                     newUsername.length > 18 ? <GoArrowUp /> : '✓'}
+                                </button>
                             </span>
                         ) : (
                             <span>{userData.user.username}<FaRegEdit onClick={handleEditUsername} /></span>

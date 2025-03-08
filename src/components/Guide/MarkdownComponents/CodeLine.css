@@ -5,24 +5,7 @@
     line-height: 1.5;
 }
 
-.LineNumber {
-    display: inline-block;
-    width: 1.5vw;
-    text-align: right;
-    color: #999;
-    user-select: none;
-    padding-right: 0.5vw;
-    border-right: 0.05vw solid #ddd;
-    margin-right: 0.5vw;
-}
-
 .LineContent {
     flex: 1;
     white-space: pre;
-}
-
-/* 关键词高亮 */
-.keyword {
-    color: #0000ff;
-    font-weight: bold;
 }

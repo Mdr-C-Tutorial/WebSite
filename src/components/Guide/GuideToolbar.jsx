@@ -38,31 +38,31 @@ function GuideToolbar({ chapters, onChapterChange }) {
 
     return (
         <div className="GuideToolbar">
-            <ChapterSelector 
+            <ChapterSelector
                 chapters={chapters}
-                currentChapter={currentChapter} 
-                onChapterChange={handleChapterChange} 
+                currentChapter={currentChapter}
+                onChapterChange={handleChapterChange}
             />
             <div className="ChapterControls">
-                <button 
+                <button
                     className={`ChapterButton ${currentChapter <= 0 ? 'Disabled' : ''}`}
                     onClick={handlePrevChapter}
                     disabled={currentChapter <= 0}
                 >
                     <IoChevronBack />
                 </button>
-                <button 
+                <button
                     className={`ChapterButton ${currentChapter >= totalChapters ? 'Disabled' : ''}`}
                     onClick={handleNextChapter}
                     disabled={currentChapter >= totalChapters}
                 >
                     <IoChevronForward />
                 </button>
-                <button 
+                <button
                     className="RevealAnswer"
                     onClick={toggleAnswer}
                 >
-                    {isShowingAnswer ? '还原代码' : '显示答案'}
+                    {isShowingAnswer ? '还原' : '答案'}
                 </button>
             </div>
         </div>

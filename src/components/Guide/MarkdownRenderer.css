@@ -3,35 +3,83 @@
 }
 
 .CodeBlockWrapper {
-    margin: 0;
-    padding: 0;
+  background-color: #f8f8f8;
+  border-radius: 0.3vw;
+  overflow-x: auto;
+}
+
+.CodeBlock {
+  display: flex;
+  flex-direction: column;
+  font-family: 'JetBrains Mono', monospace;
+  padding: .5vw;
+}
+
+.CodeLine {
+  display: flex;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.LineNumber {
+  color: #663399;
+  text-align: right;
+  padding-right: 1vw;
+  margin-right: 1vw;
+  border-right: 0.05vw solid #ddd;
+  min-width: 1.5vw;
+  user-select: none;
+  font-size: 0.9vw;
+}
+
+.LineContent {
+  flex: 1;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9vw;
 }
 
 .InlineCode {
-    background-color: #f8f8f8;
-    padding: 0.1vw 0.3vw;
-    border-radius: 0.2vw;
-    font-family: 'Consolas', monospace;
-    font-size: 0.9vw;
-    border: 0.05vw solid #e0e0e0;
-    display: inline;
-    white-space: nowrap;
+  background-color: #f8f8f8;
+  padding: 0.1vw 0.3vw;
+  border-radius: 0.2vw;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9vw;
+  border: 0.05vw solid #e0e0e0;
+  display: inline;
+  white-space: nowrap;
 }
 
-.InlineCode.keyword {
+/* 高亮样式 */
+.keyword {
   color: #0000ff;
   font-weight: bold;
 }
 
-.InlineCode.preprocessor {
-  color: #a020f0; /* 紫色 */
+.preprocessor {
+  color: #663399;
   font-weight: bold;
 }
 
-.InlineCode.library-function {
-  color: #008000; /* 绿色 */
+.comment {
+  color: #008000;
+  opacity: 0.8;
 }
 
+.string {
+  color: #008000;
+  font-weight: bold;
+}
+
+.number {
+  color: #881010;
+  font-weight: bold;
+}
+
+.library-function {
+  color: #8B0000;
+}
+
+/* Markdown 样式 */
 .MarkdownH1 {
   font-size: 1.5vw;
   color: #333;
@@ -55,7 +103,8 @@
   line-height: 1.6;
 }
 
-.MarkdownUl, .MarkdownOl {
+.MarkdownUl,
+.MarkdownOl {
   margin-bottom: 1vw;
   padding-left: 1.5vw;
 }
@@ -63,50 +112,19 @@
 .MarkdownLi {
   margin-bottom: 0.5vw;
 }
-/* 关键词高亮 */
-.keyword {
-    color: #0000ff;
-    font-weight: bold;
+
+.LineNumbers {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1vw;
+  margin-right: 1vw;
+  border-right: 0.05vw solid #ddd;
+  user-select: none;
 }
 
-/* 预处理器指令高亮 */
-.preprocessor {
-    color: #663399; /* 紫色 */
-    font-weight: bold;
-}
-
-/* 注释高亮 */
-.comment {
-    color: #008000; /* 浅绿色 */
-    opacity: 0.8;
-}
-
-/* 字符串字面量和字符常量高亮 */
-.string {
-    color: #008000; /* 浅绿色 */
-    font-weight: bold;
-}
-
-/* 整数常量和浮点数常量高亮 */
-.number {
-    color: #881010; /* 红色 */
-    font-weight: bold;
-}
-
-/* 库函数高亮 */
-.library-function {
-    color: #8B0000; /* 暗红色 */
-}
-.InlineCode.keyword {
-    color: #0000ff;
-    font-weight: bold;
-}
-
-.InlineCode.preprocessor {
-    color: #a020f0;
-    font-weight: bold;
-}
-
-.InlineCode.library-function {
-    color: #008000;
+.hljs {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  font-family: 'JetBrains Mono', monospace;
 }
