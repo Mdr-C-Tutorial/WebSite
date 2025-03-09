@@ -42,7 +42,7 @@
     cursor: not-allowed;
 }
 
-.RevealAnswer {
+.AnswerButton {
     padding: 0.5vw 1vw;
     border-radius: 0.2vw;
     font-size: 1.5vw;
@@ -57,6 +57,11 @@
     margin-right: 0.5vw;
 }
 
-.RevealAnswer:hover {
+.AnswerButton:hover {
+    background-color: #663399;
     transform: scale(1.1);
+}
+
+.AnswerButton.Active {
+    background-color: #4a2463;
 }

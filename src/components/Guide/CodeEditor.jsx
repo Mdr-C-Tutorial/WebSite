@@ -1,7 +1,7 @@
 import './CodeEditor.css';
 import { useState, useRef, useEffect } from 'react';
 import * as monaco from 'monaco-editor';
-import { useCode } from './context/CodeContext';
+import { useCode } from './ContextGuide/CodeContext';
 
 function CodeEditor() {
     const [compiler, setCompiler] = useState('GCC v14.1');

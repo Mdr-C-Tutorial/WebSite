@@ -1,9 +1,9 @@
-import './Chapter.css';
+import '../Chapter.css';
 import { useEffect } from 'react';
-import { useCode } from '../ContextGuide/CodeContext';
-import MarkdownRenderer from '../MarkdownRenderer';
+import { useCode } from '../../ContextGuide/CodeContext';
+import MarkdownRenderer from '../../MarkdownRenderer';
 
-function Chapter0() {
+export default function Chapter011() {
     const { setChapterCodes } = useCode();
 
     useEffect(() => {
@@ -28,5 +28,3 @@ int main() {
         </div>
     );
 }
-
-export default Chapter0;
