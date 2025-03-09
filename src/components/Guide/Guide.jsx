@@ -11,65 +11,77 @@ import { CodeProvider } from './ContextGuide/CodeContext';
 import Chapter0 from './Chapters/Chapter0';
 import Chapter011 from './Chapters/Chapter1/Chapter011';
 import Chapter012 from './Chapters/Chapter1/Chapter012';
+import Chapter021 from './Chapters/Chapter2/Chapter021';
+import Chapter013 from './Chapters/Chapter1/Chapter013';
+import Chapter064 from './Chapters/Chapter6/Chapter064';
+import Chapter065 from './Chapters/Chapter6/Chapter065';
 
 const chapters = [
     {
         id: 0,
-        title: "第0章：使用指南",
+        title: "0：使用指南",
         isIntro: true  // 标记为介绍章节，不分页
     },
     {
         id: 1,
-        title: "第1章：Hello World",
+        title: "1：输出",
         pages: [
-            { id: 1, title: "C语言基础" },
-            { id: 2, title: "第一个程序" },
-            { id: 3, title: "编译运行" }
+            { id: 1, title: "Hello World!" },
+            { id: 2, title: "格式化字符" },
+            { id: 3, title: "宽度和精度" }
         ],
         pageCount: 3
     },
     {
         id: 2,
-        title: "第2章：基本运算",
+        title: "2：对象",
         pages: [
-            { id: 1, title: "变量声明" },
-            { id: 2, title: "基本运算符" },
-            { id: 3, title: "数据类型" }
-        ],
-        pageCount: 3
-    },
-    {
-        id: 3,
-        title: "第3章：循环结构",
-        pages: [
-            { id: 1, title: "for循环" },
-            { id: 2, title: "while循环" },
-            { id: 3, title: "do-while循环" },
-            { id: 4, title: "break和continue" }
+            { id: 1, title: "整数和浮点数对象" },
+            { id: 2, title: "输入" },
+            { id: 3, title: "算术运算" },
+            { id: 4, title: "复合赋值" }
         ],
         pageCount: 4
     },
     {
-        id: 4, title: "第4章：函数", pages: [
-            "函数声明",
-            "函数定义",
-            "参数传递",
-            "返回值"
-        ]
+        id: 3,
+        title: "3：分支",
+        pages: [
+            { id: 1, title: "if" },
+            { id: 2, title: "if-else" },
+            { id: 3, title: "逻辑运算" },
+        ],
+        pageCount: 3
     },
     {
-        id: 5, title: "第5章：数组", pages: [
-            "数组定义",
-            "数组操作",
-            "多维数组"
-        ]
+        id: 4, title: "4：循环",
+        pages: [
+            { id: 1, title: "while" },
+            { id: 2, title: "do-while" },
+            { id: 3, title: "for" },
+            { id: 4, title: "break" },
+            { id: 5, title: "continue" }
+        ],
+        pageCount: 5
     },
     {
-        id: 6, title: "第6章：指针", pages: [
-            "指针基础",
-            "指针运算",
-            "指针与数组"
-        ]
+        id: 5, title: "5：数组", pages: [
+            { id: 1, title: "下标" },
+            { id: 2, title: "对数组应用循环" },
+            { id: 3, title: "示例：累加累乘" },
+            { id: 4, title: "多维数组" },
+        ],
+        pageCount: 4
+    },
+    {
+        id: 6, title: "6：函数", pages: [
+            { id: 1, title: "函数定义" },
+            { id: 2, title: "函数调用" },
+            { id: 4, title: "传递参数" },
+            { id: 3, title: "递归" },
+            { id: 4, title: "示例：汉诺塔" },
+        ],
+        pageCount: 5
     }
 ];
 function Guide() {
@@ -104,6 +116,11 @@ function Guide() {
                                 <Route path="chapter0" element={<Chapter0 />} />
                                 <Route path="chapter11" element={<Chapter011 />} />
                                 <Route path="chapter12" element={<Chapter012 />} />
+                                <Route path="chapter13" element={<Chapter013 />} />
+                                <Route path="chapter21" element={<Chapter021 />} />
+                                <Route path="chapter64" element={<Chapter064 />} />
+                                <Route path="chapter65" element={<Chapter065 />} />
+
                                 <Route path="*" element={<Navigate to="/guide/chapter0" replace />} />
                             </Routes>
                         </div>

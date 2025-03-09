@@ -17,6 +17,7 @@ function GuideToolbar({ chapters, onChapterChange }) {
         if (match) {
             const chapterId = parseInt(match[1]);
             const pageNum = parseInt(match[2]);
+            console.log(match[1], match[2]);
             setCurrentChapter(chapterId);
             setCurrentPage(pageNum);
         } else if (location.pathname.includes('chapter0')) {
@@ -96,7 +97,7 @@ function GuideToolbar({ chapters, onChapterChange }) {
                     className={`AnswerButton ${isShowingAnswer ? 'Active' : ''}`}
                     onClick={toggleAnswer}
                 >
-                    答案
+                    {isShowingAnswer ? '还原' : '答案'}
                 </button>
             </div>
         </div>
