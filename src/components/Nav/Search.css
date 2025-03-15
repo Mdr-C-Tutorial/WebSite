@@ -25,6 +25,10 @@
     overflow: hidden;
 }
 
+.Search input::placeholder {
+    opacity: 0.6;
+    font-weight: 200;
+}
 
 .Searchbutton {
     margin-right: .2vw;

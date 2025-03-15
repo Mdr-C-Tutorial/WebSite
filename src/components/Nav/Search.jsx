@@ -4,7 +4,7 @@ import { CiSearch } from "react-icons/ci";
 function Search() {
     return (
         <div className="Search">
-            <input type="text" id="search" placeholder={"Search Something"} />
+            <input type="text" id="search" placeholder={"Search something ..."} />
             <CiSearch onClick={() => {
                 let param = document.getElementById('search').value;
                 console.log(param);
