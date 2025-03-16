@@ -62,7 +62,3 @@
     background-color: #663399;
     transform: scale(1.1);
 }
-
-.AnswerButton.Active {
-    background-color: #4a2463;
-}

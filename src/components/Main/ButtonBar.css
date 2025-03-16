@@ -31,7 +31,7 @@
 
 .Button-Bar #Repository-Button {
     color: rebeccapurple;
-    border: 1px solid rebeccapurple;
+    border: 0.1vw solid rebeccapurple;
     height: 1.5vw;
     font-size: 1.65vw;
     font-family: "Poppins", serif;

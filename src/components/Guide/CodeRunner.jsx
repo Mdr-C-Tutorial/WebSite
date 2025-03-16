@@ -1,9 +1,22 @@
 import './CodeRunner.css';
 import { useState } from 'react';
 
-function CodeRunner() {
+function CodeRunner({ success = false, output = 'error warning' }) {
     const [stdin, setStdin] = useState('');
-    const [output, setOutput] = useState('');
+
+    const formatOutput = (text) => {
+        if (success) return text;
+
+        return text.split(/(error|warning)/).map((part, index) => {
+            if (part.toLowerCase() === 'error') {
+                return <span key={index} className="error">error</span>;
+            }
+            if (part.toLowerCase() === 'warning') {
+                return <span key={index} className="warning">warning</span>;
+            }
+            return part;
+        });
+    };
 
     return (
         <div className="CodeRunner">
@@ -17,7 +30,7 @@ function CodeRunner() {
                 />
             </div>
             <div className="RunnerOutput">
-                {output || '运行结果将显示在这里'}
+                {formatOutput(output)}
             </div>
         </div>
     );

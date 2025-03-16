@@ -1,7 +1,7 @@
 .Search {
     height: 3vw;
     border-radius: 1.5vw;
-    border: 2px solid #777;
+    border: 0.15vw solid #777;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -9,7 +9,7 @@
 }
 
 .Search:hover {
-    border: 2px solid #2b124d;
+    border: 0.15vw solid #2b124d;
 }
 
 #search {
