@@ -145,13 +145,13 @@ function Profile() {
                                     onChange={(e) => setNewUsername(e.target.value)}
                                     className="UsernameInput"
                                 />
-                                <button 
+                                <button
                                     onClick={handleUpdateUsername}
                                     className={newUsername.length < 3 || newUsername.length > 18 ? 'invalid' : ''}
                                     disabled={newUsername.length < 3 || newUsername.length > 18}
                                 >
-                                    {newUsername.length < 3 ? <GoArrowDown /> : 
-                                     newUsername.length > 18 ? <GoArrowUp /> : '✓'}
+                                    {newUsername.length < 3 ? <GoArrowDown /> :
+                                        newUsername.length > 18 ? <GoArrowUp /> : '✓'}
                                 </button>
                             </span>
                         ) : (

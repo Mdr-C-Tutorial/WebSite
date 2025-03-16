@@ -29,13 +29,13 @@
 
 .Profile .ProfileError p {
     font-family: 'Poppins', sans-serif;
-    font-size: 2vw;
+    font-size: 3vw;
     color: #ff4444;
 }
 
 .Profile .ProfileError p:last-child {
     color: #666;
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 
 .Profile .ProfileContent {

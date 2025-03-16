@@ -3,6 +3,20 @@
     min-height: 90vh;
 }
 
+.FeedbackLoading {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.FeedbackLoading h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vw;
+    color: #666;
+    font-weight: 200;
+}
+
 .FeedbackEditor {
     margin-top: 2vw;
     display: flex;
@@ -57,18 +71,39 @@
     box-shadow: 0 0 5px rgba(102, 51, 153, 0.3);
 }
 
-.FeedbackLoading {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.FeedbackError {
+    position: relative;
 }
 
-.FeedbackLoading h1 {
+.FeedbackError {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.FeedbackError {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 1rem;
+}
+
+.FeedbackError h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2vw;
+    font-size: 3vw;
+    font-weight: 300;
+    color: #ff6b6b;
+}
+
+.FeedbackError p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5vw;
     color: #666;
-    font-weight: 200;
 }
 
 .FeedbackLogin {

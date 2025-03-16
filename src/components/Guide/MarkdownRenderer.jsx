@@ -17,7 +17,6 @@ function MarkdownRenderer({ content }) {
                         }
                         // 处理代码块
                         const language = 'c';
-                        const highlightedCode = hljs.highlight(text, { language }).value;
                         const lines = text.split('\n');
 
                         return (

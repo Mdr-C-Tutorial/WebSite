@@ -8,6 +8,7 @@ function FeedBack() {
     const [isLogged, setIsLogged] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [feedbackContent, setFeedbackContent] = useState('');
+    const [networkError, setNetworkError] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -22,12 +23,16 @@ function FeedBack() {
             } catch (error) {
                 console.error('Error checking auth:', error);
                 setIsLogged(false);
+                setNetworkError(true);
+                setTimeout(() => {
+                    navigate('/');
+                }, 3000);
             } finally {
                 setIsLoading(false);
             }
         };
         checkAuth();
-    }, []);
+    }, [navigate]);
 
     const handleSubmit = async () => {
         try {
@@ -51,7 +56,27 @@ function FeedBack() {
             alert('提交失败，请检查网络连接');
         }
     };
+    const [countdown, setCountdown] = useState(3);
 
+    useEffect(() => {
+        if (networkError && countdown > 0) {
+            const timer = setInterval(() => {
+                setCountdown(prev => prev - 1);
+            }, 1000);
+            return () => clearInterval(timer);
+        }
+    }, [networkError, countdown]);
+
+    if (networkError) {
+        return (
+            <div className="FeedBack">
+                <div className="FeedbackError">
+                    <h1>Network Error</h1>
+                    <p>{countdown} 秒后自动返回主页...</p>
+                </div>
+            </div>
+        );
+    }
     if (isLoading) {
         return (
             <div className="FeedBack">
