@@ -70,21 +70,28 @@ function SearchPage() {
 
     useEffect(() => {
         document.title = "Search - " + name + " | Mdr-C-Tutorial"
-    }, [name]);
-
-    fetch(host + '/search/' + name).then(res => {
-        if (res.ok) {
-            return res.json()
-        } else {
-            console.log("error")
-        }
-    }).then(_data => {
-        let __data = {}
-        __data.mct = _data.mct
-        __data.cppref = _data.cppref
-        __data.google = _data.google
-        setData(__data)
-    })
+        
+        // 使用 useEffect 中获取数据，避免无限循环
+        fetch(host + '/search/' + name)
+            .then(res => {
+                if (res.ok) {
+                    return res.json()
+                } else {
+                    console.log("搜索请求失败:", res.status)
+                    throw new Error("搜索请求失败")
+                }
+            })
+            .then(_data => {
+                setData({
+                    mct: _data.mct || [],
+                    cppref: _data.cppref || [],
+                    google: _data.google || []
+                })
+            })
+            .catch(err => {
+                console.error("搜索错误:", err)
+            })
+    }, [name, host]);
 
     function switchLanguage(language) {
         setData(data => {

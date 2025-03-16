@@ -11,6 +11,11 @@
     font-size: 2vw !important;
     margin-bottom: 0.5vw;
     transition: all 0.4s ease-in-out;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    hyphens: auto;
+    max-width: 100%;
 }
 
 .ResultBlock p {
