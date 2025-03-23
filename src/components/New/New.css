@@ -1,0 +1,209 @@
+.NewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    padding: 0 auto;
+}
+
+.NewContainer .Login {
+    margin: 10vh 0;
+    width: 63vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.NewContainer .Login a {
+    color: rebeccapurple;
+    font-size: 1.5vw;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.5s;
+}
+
+.NewContainer .Login a:hover {
+    color: black;
+}
+
+.NewContainer .Card {
+    width: 63vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.NewContainer .Card .CardLeft .CardLeftTop h1 {
+    font-family: 'JetBrains Mono', serif;
+    font-size: 8vw;
+    margin-top: -13vw;
+    color: rebeccapurple;
+}
+
+.NewContainer .Card .CardLeft .CardLeftTop h1 span {
+    font-size: 16vw;
+}
+
+.NewContainer .Card .CardLeftMiddle {
+    position: relative;
+    width: 18vw;
+    height: 18vw;
+    margin-bottom: 4vw;
+}
+
+.CLogo {
+    width: 18vw;
+    height: 18vw;
+    position: absolute;
+    box-sizing: border-box;
+    border: 1.3vw solid rebeccapurple;
+    border-top-color: #000;
+    border-bottom-color: #000;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.CLogo .Hider {
+    position: absolute;
+    background-color: white;
+    width: 6vw;
+    height: 6vw;
+    top: calc(50% - 3vw);
+    right: -2.5vw;
+    z-index: 10;
+}
+
+.Lightning {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.LightningCanvas {
+    width: 40%;
+    height: 40%;
+}
+
+.Card .CardLeft .CardLeftBottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2vw;
+}
+
+.Card .CardLeft .CardLeftBottom {
+    font-size: 2vw;
+    color: rebeccapurple;
+
+}
+
+.Card .CardLeft .CardLeftBottom:hover {
+    color: black;
+}
+
+.Card .CardLeft .CardLeftBottom p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3vw;
+    font-weight: 300;
+    color: rebeccapurple;
+}
+
+.Card .CardRight {
+    height: 33vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.CardRightParas {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 13vw;
+    gap: 2vw;
+}
+
+.CardRightParas p {
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2vw;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+}
+
+.CardRightParas p span {
+    font-weight: 400;
+    color: rebeccapurple;
+}
+
+.CardRightParas p a {
+    color: rebeccapurple;
+    font-weight: 400;
+    transition: all 0.5s;
+    text-decoration: wavy;
+}
+
+.CardRightParas p a:hover {
+    color: black;
+}
+
+.CardRightLogos {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    font-size: 2vw;
+    color: rebeccapurple;
+    gap: 1vw;
+}
+
+.CardRightLogos svg {
+    transition: all .5s;
+}
+
+.CardRightLogos svg:hover {
+    color: black;
+}
+
+.CardRightLogos .CardRightToolBar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.CardRightLogos a {
+    display: flex;
+    align-items: center;
+}
+
+.CardRightLogos .CardRightToolBar .CardRightToolBarHidden {
+    width: 0;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    align-items: center;
+    font-size: 2vw;
+}
+
+.CardRightLogos .CardRightToolBar .CardRightToolBarHidden a {
+    display: flex;
+    align-items: center;
+    padding-right: 0.7vw;
+}
+
+.CardRightLogos .CardRightToolBar:hover .CardRightToolBarHidden {
+    width: 14vw;
+}
+
+.CardRightLogos .CardRightToolBar:hover .CardRightToolBarMain {
+    color: #432264;
+}

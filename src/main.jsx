@@ -18,6 +18,7 @@ import Register from './components/Register/Register';
 import Registered from './components/Registered/Registered';
 import Profile from './components/Profile/Profile';
 import Guide from './components/Guide/Guide';
+import New from './components/New/New';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -38,6 +39,7 @@ root.render(
         <Route path="/profile" element={<Profile />} />
         <Route path="/search/:name" element={<SearchPage />} />
         <Route path="/guide/*" element={<Guide />} />
+        <Route path="/new" element={<New />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

@@ -12,10 +12,10 @@ function Search() {
 
     return (
         <div className="Search">
-            <input 
-                type="text" 
-                id="search" 
-                placeholder={"Search something ..."} 
+            <input
+                type="text"
+                id="search"
+                placeholder={"Search ..."}
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') {
                         handleSearch();
