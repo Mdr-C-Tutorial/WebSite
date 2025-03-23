@@ -17,42 +17,93 @@ const New = () => {
     useEffect(() => {
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
+        let animationId;
+        let fillProgress = 0;
 
-        // 设置canvas尺寸
         canvas.width = 140;
         canvas.height = 140;
 
-        // 绘制闪电函数
-        const drawLightning = (fill = false) => {
+        const drawLightning = (progress = 0) => {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.beginPath();
-            ctx.moveTo(70, 30);  // 顶点
-            ctx.lineTo(50, 70);  // 左上
-            ctx.lineTo(70, 70);  // 左中
-            ctx.lineTo(70, 100);  // 中点
-            ctx.lineTo(90, 60);  // 右下
-            ctx.lineTo(70, 60);  // 右中
-            ctx.closePath();
 
-            if (fill) {
-                ctx.fillStyle = 'rebeccapurple';
-                ctx.fill();
-                ctx.strokeStyle = 'rebeccapurple';
-                ctx.lineWidth = 2;
-                ctx.stroke();
+            // 绘制阴影
+            if (progress > 0) {
+                ctx.shadowColor = '#331747' + Math.floor((128 * progress + 128)).toString(16);
+                ctx.shadowBlur = 50 * progress;  // 增加模糊范围
+                ctx.shadowOffsetX = 8 * progress;  // 增加水平偏移
+                ctx.shadowOffsetY = 8 * progress;  // 增加垂直偏移
             } else {
-                ctx.strokeStyle = 'rebeccapurple';
-                ctx.lineWidth = 2;
-                ctx.stroke();
+                ctx.shadowColor = 'transparent';
+                ctx.shadowBlur = 0;
+                ctx.shadowOffsetX = 0;
+                ctx.shadowOffsetY = 0;
+            }
+
+            // 绘制轮廓
+            ctx.beginPath();
+            ctx.moveTo(70, 30);
+            ctx.lineTo(50, 70);
+            ctx.lineTo(70, 70);
+            ctx.lineTo(70, 100);
+            ctx.lineTo(90, 60);
+            ctx.lineTo(70, 60);
+            ctx.closePath();
+            ctx.strokeStyle = 'rebeccapurple';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            // 绘制填充
+            if (progress > 0) {
+                ctx.shadowColor = 'transparent'; // 填充不需要阴影
+                ctx.save();
+                ctx.beginPath();
+                ctx.moveTo(70, 30);
+                ctx.lineTo(50, 70);
+                ctx.lineTo(70, 70);
+                ctx.lineTo(70, 100);
+                ctx.lineTo(90, 60);
+                ctx.lineTo(70, 60);
+                ctx.closePath();
+                ctx.clip();
+
+                const gradient = ctx.createLinearGradient(0, 100, 0, 30);
+                gradient.addColorStop(0, 'rebeccapurple');
+                gradient.addColorStop(progress, 'rebeccapurple');
+                gradient.addColorStop(progress, 'transparent');
+                gradient.addColorStop(1, 'transparent');
+
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.restore();
+            }
+        };
+
+        const animate = () => {
+            fillProgress += 0.015; // 调整为1.5秒
+            if (fillProgress <= 1) {
+                drawLightning(fillProgress);
+                animationId = requestAnimationFrame(animate);
             }
         };
 
         // 初始绘制
         drawLightning();
 
-        // 添加hover事件
-        canvas.addEventListener('mouseenter', () => drawLightning(true));
-        canvas.addEventListener('mouseleave', () => drawLightning(false));
+        // hover事件处理
+        canvas.addEventListener('mouseenter', () => {
+            fillProgress = 0;
+            animate();
+        });
+
+        canvas.addEventListener('mouseleave', () => {
+            cancelAnimationFrame(animationId);
+            fillProgress = 0;
+            drawLightning();
+        });
+
+        return () => {
+            cancelAnimationFrame(animationId);
+        };
     }, []);
 
     return (
@@ -63,7 +114,7 @@ const New = () => {
             <div className="Card">
                 <div className="CardLeft">
                     <div className="CardLeftTop">
-                        <h1><span>M</span>dr</h1>
+                        <h1><span>M</span><span>d</span>r</h1>
                     </div>
                     <div className="CardLeftMiddle">
                         <div className="CLogo">
@@ -74,8 +125,12 @@ const New = () => {
                         </div>
                     </div>
                     <div className="CardLeftBottom">
-                        <p>Tutorial</p>
-                        <FaArrowRight />
+                        <p>
+                            <span>T</span>
+                            <span>u</span>toriaL</p>
+                        <div>
+                            <FaArrowRight />
+                        </div>
                     </div>
                 </div>
                 <div className="CardRight">

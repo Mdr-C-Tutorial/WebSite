@@ -37,21 +37,29 @@
 }
 
 .NewContainer .Card .CardLeft .CardLeftTop h1 {
-    font-family: 'JetBrains Mono', serif;
+    font-family: 'Geo', serif;
     font-size: 8vw;
-    margin-top: -13vw;
-    color: rebeccapurple;
+    font-weight: 400;
+    margin-top: -12vw;
+    color: black;
 }
 
 .NewContainer .Card .CardLeft .CardLeftTop h1 span {
+
+    color: rgb(60, 27, 93);
+}
+
+.NewContainer .Card .CardLeft .CardLeftTop h1 span:nth-child(1) {
     font-size: 16vw;
+    font-weight: 900;
+    color: rebeccapurple;
 }
 
 .NewContainer .Card .CardLeftMiddle {
     position: relative;
     width: 18vw;
     height: 18vw;
-    margin-bottom: 4vw;
+    margin-bottom: 1vw;
 }
 
 .CLogo {
@@ -87,8 +95,9 @@
 }
 
 .LightningCanvas {
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: 50%;
+    cursor: pointer;
 }
 
 .Card .CardLeft .CardLeftBottom {
@@ -96,27 +105,51 @@
     flex-direction: row;
     align-items: center;
     gap: 2vw;
+    margin-left: 0.5vw;
 }
 
-.Card .CardLeft .CardLeftBottom {
-    font-size: 2vw;
-    color: rebeccapurple;
-
+.Card .CardLeft .CardLeftBottom div {
+    background-color: rebeccapurple;
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    transform: translateY(.5vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5vw;
+    color: white;
+    transition: all 0.5s;
 }
 
-.Card .CardLeft .CardLeftBottom:hover {
-    color: black;
+.Card .CardLeft .CardLeftBottom div:hover {
+    background-color: black;
 }
 
 .Card .CardLeft .CardLeftBottom p {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
     font-family: 'Poppins', sans-serif;
     font-size: 3vw;
-    font-weight: 300;
+    font-weight: 500;
     color: rebeccapurple;
 }
 
+.Card .CardLeft .CardLeftBottom p span:nth-child(1) {
+    color: black;
+    font-weight: 600;
+    font-size: 5vw;
+    transform: translateY(.5vw);
+}
+
+.Card .CardLeft .CardLeftBottom p span:nth-child(2) {
+    color: #432264;
+}
+
 .Card .CardRight {
-    height: 33vw;
+    height: 32vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
