@@ -1,17 +1,63 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-.IconLink {
-  color: black;
-}
-
 .App {
-  display: flex;
-  flex-direction: column;
+    background-color: var(--background-dark);
+}
+
+
+.App .AppContainer .AppContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.App .AppContainer .AppContent h1 {
+    font-family: 'Geo';
+    font-weight: 500;
+    font-size: 7.5vw;
+    color: white;
+    padding-top: 3vw;
+}
+
+.App .AppContainer .AppContent h1 span {
+    font-weight: 600;
+    font-size: 11vw;
+}
+
+.App .AppContainer .AppContent h1 span:nth-child(1) {
+    font-size: 16vw;
+    line-height: 16vw;
+    font-weight: 700;
+}
+
+.App .AppContainer .AppContent>p {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: #eee;
+}
+
+.AppContent .Cards {
+    display: flex;
+    flex-direction: row;
+    gap: 4vw;
+    margin: 3vw 0;
+}
+
+.Tools {
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+}
+
+.Account {
+    position: absolute;
+    top: 2vw;
+    right: 3vw;
+}
+
+.Account p {
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 1.2vw;
+    cursor: pointer;
 }

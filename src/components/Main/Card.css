@@ -1,0 +1,85 @@
+.Card {
+    width: 25vw;
+    height: 30vw;
+    border: 2px solid var(--background-dark);
+    border-radius: 1vw;
+    background-color: #00000022;
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    padding-top: 1.5vw;
+    gap: 0.5vw;
+}
+
+.Card:hover {
+    background-color: #00000055;
+    border-radius: 2vw;
+}
+
+.Card.Yellow:hover {
+    border: 2px solid var(--yellow-02);
+}
+
+.Card.Green:hover {
+    border: 2px solid var(--green-02);
+}
+
+.Card.Cyan:hover {
+    border: 2px solid var(--cyan-02);
+}
+
+.Card.Yellow h2,
+.Card.Yellow p a {
+    color: var(--yellow-01);
+}
+
+.Card.Yellow:hover h2,
+.Card.Yellow:hover p a {
+    color: var(--yellow-02);
+}
+
+.Card.Green h2,
+.Card.Green p a {
+    color: var(--green-01);
+}
+
+.Card.Green:hover h2,
+.Card.Green:hover p a {
+    color: var(--green-02);
+}
+
+.Card.Cyan h2,
+.Card.Cyan p a {
+    color: var(--cyan-01);
+}
+
+.Card.Cyan:hover h2,
+.Card.Cyan:hover p a {
+    color: var(--cyan-02);
+}
+
+.Card h2 {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 1.5vw;
+    margin: 0;
+    transition: all .5s;
+}
+
+.Card h2>span {
+    font-weight: 600;
+    font-size: 3vw;
+}
+
+.Card p {
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1.1vw;
+}
+
+.Card p a {
+    font-size: 1.2vw;
+    font-weight: 500;
+}
