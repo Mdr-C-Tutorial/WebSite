@@ -1,11 +1,25 @@
 import './App.css';
 import Card from './components/Main/Card';
 import { Link } from 'react-router-dom';
+import { FaTools, FaGithub } from 'react-icons/fa';
+import { DiVisualstudio } from 'react-icons/di';
+import { SiCompilerexplorer } from 'react-icons/si';
+import { VscReferences } from 'react-icons/vsc';
 
 function App() {
-
   return (
     <div className="App">
+      <div className="ToolBar">
+        <div className="ToolBarMain">
+          <FaTools />
+        </div>
+        <div className="ToolBarItems">
+          <Link><DiVisualstudio /></Link>
+          <Link><FaGithub /></Link>
+          <Link><SiCompilerexplorer /></Link>
+          <Link><VscReferences /></Link>
+        </div>
+      </div>
       <div className="AppContainer">
         <div className="Tools"></div>
         <div className="Account">
@@ -13,10 +27,11 @@ function App() {
         </div>
         <div className="AppContent">
           <h1><span>Mdr</span> C Tutorial.</h1>
-          <p>For all who loves C PL and CS.</p>
+          <p>- 献给所有热爱C语言和计算机科学的人 -</p>
           <div className="Cards">
             <Card color={1} >
               <h2><span>M</span>odded.</h2>
+              <p>Learn about our <Link>Guided Tutorial</Link>.</p>
               <p><Link>Document</Link> deployed by <Link>Vitepress</Link>.</p>
               <p>Check your code on <Link>MdrOJ</Link>.</p>
               <p>Share your idea and ask questions on <Link>MdrForum</Link>.</p>

@@ -1,0 +1,255 @@
+.Guide {
+    height: 100vh;
+    width: 100vw;
+    padding: .5vw 2vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.Guide .GuideHeader {
+    height: 5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.Guide .GuideHeader .MCT {
+    font-family: 'Poppins';
+    font-weight: 900;
+    font-size: 3vw;
+    color: white;
+    padding-left: 0.5vw;
+}
+
+.Guide .GuideHeader .GuideText {
+    font-family: 'Poppins';
+    font-weight: 300;
+    color: #eee;
+    font-size: 2.2vw;
+    height: 2.55vw;
+    margin-left: 2vw;
+    border-left: 2px solid #eee;
+    padding-left: 2vw;
+}
+
+.Guide .GuideBar {
+    box-sizing: border-box;
+    width: 100%;
+    height: 3.5vw;
+    border: 1px solid #ccc;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Guide .GuideBar .GuideBarLeft {
+    width: 60%;
+    height: 100%;
+    border-right: #ccc 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Guide .GuideBar .GuideBarLeft .PageSelector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 1.5vw;
+    gap: 1vw;
+    font-size: 1vw;
+    color: white;
+}
+
+.Guide .GuideBar .GuideBarLeft .PageSelector .PageTitle {
+    line-height: 1;
+    font-size: 1.1vw;
+    color: white;
+}
+
+.Guide .GuideBar .GuideBarLeft .PageChanger {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 2vw;
+    gap: 1vw;
+}
+
+.Guide .GuideBar .GuideBarLeft .PageChanger .PageChangeItem {
+    position: relative;
+    font-size: 1vw;
+    cursor: pointer;
+    border: 1px solid var(--yellow-02);
+    border-radius: 50%;
+    box-sizing: border-box;
+    width: 2vw;
+    height: 2vw;
+    color: white;
+    transition: all .6s;
+}
+
+.Guide .GuideBar .GuideBarLeft .PageChanger .PageChangeItem:hover {
+    color: var(--yellow-02);
+    transition: 0;
+}
+
+.Guide .GuideBar .GuideBarLeft .PageChanger .PageChangeItem svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+}
+
+.Guide .GuideBar .GuideBarLeft .PageChanger .PageChangeItem::after {
+    content: "";
+    position: absolute;
+    top: -.5vw;
+    left: -.6vw;
+    z-index: 1;
+    width: 3.5vw;
+    height: 3.5vw;
+    background-color: var(--background-dark);
+    border-radius: 50%;
+    transition: all 1s;
+}
+
+.Guide .GuideBar .GuideBarLeft .PageChanger .PageChangeItem:hover::after {
+    transform: scale(0);
+}
+
+.Guide .GuideBar .GuideBarRight {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2vw;
+    padding-left: 1.5vw;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    color: white;
+    font-size: 1vw;
+    cursor: pointer;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem>div,
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div {
+    font-family: 'JetBrains Mono';
+    font-weight: 300;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem>div>span,
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div>span {
+    font-family: 'Poppins';
+    font-weight: 400;
+    margin-right: 0.2vw;
+    font-size: 1.1vw;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater {
+    height: 100%;
+    width: 0;
+    position: relative;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard {
+    position: absolute;
+    top: 2.9vw;
+    left: -3.5vw;
+    width: 15vw;
+    border: 1px solid #ccc;
+    border-radius: 1vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem {
+    height: 2.5vw;
+    display: flex;
+    font-display: row;
+    align-items: center;
+    gap: .9vw;
+    border-radius: .5vw;
+    padding-left: 0.5vw;
+    transition: all .2s;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem:hover {
+    background-color: #6663;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem .CompilerItemName {
+    color: white;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem {
+    color: transparent;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem:hover {
+    color: #fffa;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem.Selected {
+    color: white;
+}
+
+.Guide .GuideBar .GuideBarRight .StandardSelector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.Guide .GuideBar .GuideBarRight .StandardSelector .StandardCurrent {
+    font-family: 'Poppins';
+    font-weight: 300;
+    color: white;
+    font-size: 1.2vw;
+}
+
+.Guide .GuideBar .GuideBarRight .StandardSelector .StandardCurrent>span {
+    font-family: 'JetBrains Mono';
+    font-weight: 600;
+}
+
+.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater {
+    height: 1.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #ddd;
+}
+
+.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardLower,
+.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardUpper {
+    font-size: .9vw;
+    height: 0.9vw;
+    width: 0.9vw;
+}
+
+.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardLower.Disabled,
+.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardUpper.Disabled {
+    color: #999 !important;
+}
+
+.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardLower:hover,
+.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardUpper:hover {
+    color: white;
+}

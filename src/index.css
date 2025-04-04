@@ -34,3 +34,7 @@ hr {
 iframe {
   border: none;
 }
+
+.Main{
+  background-color: var(--background-dark);
+}

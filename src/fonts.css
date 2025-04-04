@@ -200,3 +200,33 @@
     src: url(/fonts/SF/SanFranciscoDisplay-Black-3.otf);
     font-weight: 900;
 }
+
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url(/fonts/Harmony/HarmonyOS_SansSC_Thin.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url(/fonts/Harmony/HarmonyOS_SansSC_Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url(/fonts/Harmony/HarmonyOS_SansSC_Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url(/fonts/Harmony/HarmonyOS_SansSC_Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'HarmonyOS Sans';
+    src: url(/fonts/Harmony/HarmonyOS_SansSC_Bold.ttf);
+    font-weight: 700;
+}

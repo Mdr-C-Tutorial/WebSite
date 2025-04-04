@@ -6,14 +6,19 @@ import './var.css'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from './App';
+import Guide from './components/Guide/Guide';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
+    <div className="Main">
+
+    <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/guide" element={<Guide/>}/>
       </Routes>
+    </div>
     </BrowserRouter>
   </React.StrictMode>
 );
