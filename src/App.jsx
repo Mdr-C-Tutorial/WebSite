@@ -12,7 +12,7 @@ function App() {
           <p>Log in</p>
         </div>
         <div className="AppContent">
-          <h1><span>M</span><span>d</span><span>r</span> C Tutorial.</h1>
+          <h1><span>Mdr</span> C Tutorial.</h1>
           <p>For all who loves C PL and CS.</p>
           <div className="Cards">
             <Card color={1} >

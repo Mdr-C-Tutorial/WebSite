@@ -10,7 +10,7 @@
 }
 
 .App .AppContainer .AppContent h1 {
-    font-family: 'Geo';
+    font-family: 'SF';
     font-weight: 500;
     font-size: 7.5vw;
     color: white;
@@ -18,13 +18,8 @@
 }
 
 .App .AppContainer .AppContent h1 span {
-    font-weight: 600;
-    font-size: 11vw;
-}
-
-.App .AppContainer .AppContent h1 span:nth-child(1) {
-    font-size: 16vw;
-    line-height: 16vw;
+    font-size: 10vw;
+    line-height: 10vw;
     font-weight: 700;
 }
 
