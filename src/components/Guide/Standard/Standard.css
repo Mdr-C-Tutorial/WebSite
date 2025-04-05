@@ -10,11 +10,15 @@
     font-weight: 400;
     color: white;
     font-size: 1.2vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.05vw;
 }
 
 .StandardCurrent>span {
     font-family: 'JetBrains Mono';
-    font-weight: 600;
+    font-size: 1.15vw;
 }
 
 .StandardFloater {

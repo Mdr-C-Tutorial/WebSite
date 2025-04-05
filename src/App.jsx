@@ -30,7 +30,7 @@ function App() {
           <div className="Cards">
             <Card color={1} >
               <h2><span>M</span>odded.</h2>
-              <p>Learn about our <Link>Guided Tutorial</Link>.</p>
+              <p>Learn about our <Link to={"/guide"}>Guided Tutorial</Link>.</p>
               <p><Link>Document</Link> deployed by <Link>Vitepress</Link>.</p>
               <p>Check your code on <Link>MdrOJ</Link>.</p>
               <p>Share your idea and ask questions on <Link>MdrForum</Link>.</p>

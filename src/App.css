@@ -109,14 +109,14 @@
     position: absolute;
     inset: -1px;
     border-radius: 50%;
-    background: conic-gradient(var(--yellow-02) var(--conic-angle), white var(--conic-angle));
+    background: conic-gradient(var(--blue-02) var(--conic-angle), white var(--conic-angle));
     -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 1px), #fff calc(100% - 1px));
     mask: radial-gradient(farthest-side, transparent calc(100% - 1px), #fff calc(100% - 1px));
     transition: --conic-angle 2s ease;
 }
 
 .ToolBarItems a:hover {
-    color: var(--yellow-02);
+    color: var(--blue-02);
     border-color: transparent;
 }
 

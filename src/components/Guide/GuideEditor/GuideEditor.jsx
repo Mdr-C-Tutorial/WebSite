@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import * as monaco from 'monaco-editor';
 import './GuideEditor.css';
 
-export default function GuideEditor({ value, onChange }) {
+export default function GuideEditor({ value, onChange, onClick }) {
     const editorRef = useRef(null);
     const containerRef = useRef(null);
 
@@ -34,5 +34,6 @@ export default function GuideEditor({ value, onChange }) {
         }
     }, []);
 
-    return <div ref={containerRef} className="GuideEditor"></div>;
+    return <div ref={containerRef} className="GuideEditor"
+        onClick={onClick}></div>;
 }
