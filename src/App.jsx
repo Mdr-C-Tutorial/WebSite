@@ -1,8 +1,7 @@
 import './App.css';
 import Card from './components/Main/Card';
 import { Link } from 'react-router-dom';
-import { FaTools, FaGithub } from 'react-icons/fa';
-import { DiVisualstudio } from 'react-icons/di';
+import { FaTools, FaGithub } from 'react-icons/fa'; import { VscVscode } from "react-icons/vsc";
 import { SiCompilerexplorer } from 'react-icons/si';
 import { VscReferences } from 'react-icons/vsc';
 
@@ -14,7 +13,7 @@ function App() {
           <FaTools />
         </div>
         <div className="ToolBarItems">
-          <Link><DiVisualstudio /></Link>
+          <Link><VscVscode /></Link>
           <Link><FaGithub /></Link>
           <Link><SiCompilerexplorer /></Link>
           <Link><VscReferences /></Link>

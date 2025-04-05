@@ -53,6 +53,27 @@
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    transition: width 0.5s ease;
+}
+
+.Guide .GuideBar .GuideBarRight {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 2vw;
+    padding-left: 1.5vw;
+    transition: width 0.5s ease;
+}
+
+.Guide .GuideBar .GuideBarLeft.Unfolded {
+    width: 40%;
+}
+
+.Guide .GuideBar .GuideBarRight.Unfolded {
+    width: 60%;
 }
 
 .Guide .GuideBar .GuideBarLeft .PageSelector {
@@ -146,22 +167,24 @@
 }
 
 .Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem>div,
-.Guide .GuideBar .GuideBarRight .CompilerSelector>div {
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div>p {
     font-family: 'JetBrains Mono';
     font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem>div>span,
-.Guide .GuideBar .GuideBarRight .CompilerSelector>div>span {
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div>p>span {
     font-family: 'Poppins';
     font-weight: 400;
-    margin-right: 0.2vw;
+    margin-right: 1vw;
     font-size: 1.1vw;
 }
 
 .Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater {
     height: 100%;
-    width: 0;
     position: relative;
 }
 
@@ -169,87 +192,139 @@
     position: absolute;
     top: 2.9vw;
     left: -3.5vw;
-    width: 15vw;
+    width: 20vw;
     border: 1px solid #ccc;
     border-radius: 1vw;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     padding: 1vw;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-.5vw);
+    transition: all 0.3s ease;
+    background-color: var(--background-dark);
 }
 
-.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem {
-    height: 2.5vw;
+.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater.Open .CompilerFloatCard {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector svg {
+    transition: transform 0.3s ease;
+}
+
+.Guide .GuideBar .GuideBarRight .CompilerSelector.Open svg {
+    transform: rotate(90deg);
+}
+
+.Guide .GuideBar .ShowAnswer {
+    width: 0%;
+    height: 100%;
     display: flex;
-    font-display: row;
     align-items: center;
-    gap: .9vw;
-    border-radius: .5vw;
-    padding-left: 0.5vw;
-    transition: all .2s;
+    justify-content: center;
+    transition: width 0.5s ease, border-left 0.5s ease-in;
+    border-left: 1px solid transparent;
+    cursor: pointer;
+    overflow: hidden;
 }
 
-.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem:hover {
-    background-color: #6663;
-}
-
-.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem .CompilerItemName {
-    color: white;
-}
-
-.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem {
-    color: transparent;
-}
-
-.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem:hover {
-    color: #fffa;
-}
-
-.Guide .GuideBar .GuideBarRight .CompilerSelector>div .CompilerFloater .CompilerFloatCard .CompilerItem.Selected {
-    color: white;
-}
-
-.Guide .GuideBar .GuideBarRight .StandardSelector {
+.Guide .GuideBar .ShowAnswer.Visible {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5vw;
+    width: 9%;
+    border-left: 1px solid #ccc;
+    transition: width 0.5s ease, border-left 0.5s cubic-bezier(0, 1.33, .54, .64)
 }
 
-.Guide .GuideBar .GuideBarRight .StandardSelector .StandardCurrent {
-    font-family: 'Poppins';
-    font-weight: 300;
+.Guide .GuideBar .ShowAnswer .ShowAnswerText {
     color: white;
-    font-size: 1.2vw;
+    font-family: 'HarmonyOS Sans';
+    font-size: 1.1vw;
+    transition: all 0.3s ease;
+    width: 6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    /* 防止文字换行 */
+    overflow: hidden;
+    /* 超出部分隐藏 */
 }
 
-.Guide .GuideBar .GuideBarRight .StandardSelector .StandardCurrent>span {
-    font-family: 'JetBrains Mono';
+.Guide .GuideBar .ShowAnswer:hover .ShowAnswerText {
     font-weight: 600;
 }
 
-.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater {
-    height: 1.8vw;
+.Guide .GuideBar .GuideBarRight.Unfolded {
+    width: 60%;
+}
+
+.Guide .GuideBar .GuideBarRight.Unfolded.WithAnswer {
+    width: 51%;
+}
+
+.Guide .GuideContent {
+    width: 100%;
+    height: calc(100% - 5vw - 1.5vw);
+    display: flex;
+    flex-direction: row;
+    transition: all 0.5s ease;
+}
+
+.Guide .GuideContent .GuideContentLeft {
+    width: 60%;
+    transition: width 0.5s ease;
+    background-color: var(--background-light);
+    border-radius: 1vw;
+}
+
+.Guide .GuideContent .GuideContentLeft.Unfolded {
+    width: 40%;
+}
+
+.Guide .GuideContent .GuideContentRight {
+    width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    color: #ddd;
+    transition: width 0.5s ease;
 }
 
-.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardLower,
-.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardUpper {
-    font-size: .9vw;
-    height: 0.9vw;
-    width: 0.9vw;
+.Guide .GuideContent .GuideContentRight.Unfolded {
+    width: 60%;
 }
 
-.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardLower.Disabled,
-.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardUpper.Disabled {
-    color: #999 !important;
+.Guide .GuideContent .GuideContentRight .GuideEditor {
+    flex: 3;
+    background-color: var(--background-light);
 }
 
-.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardLower:hover,
-.Guide .GuideBar .GuideBarRight .StandardSelector .StandardFloater .StandardUpper:hover {
-    color: white;
+.Guide .GuideContent .GuideContentRight .GuideRunner {
+    flex: 2;
+    background-color: var(--background-light);
+}
+
+.monaco-editor,
+.monaco-diff-editor .synthetic-focus,
+.monaco-editor,
+.monaco-diff-editor [tabindex="0"]:focus,
+.monaco-editor,
+.monaco-diff-editor [tabindex="-1"]:focus,
+.monaco-editor,
+.monaco-diff-editor button:focus,
+.monaco-editor,
+.monaco-diff-editor input[type=button]:focus,
+.monaco-editor,
+.monaco-diff-editor input[type=checkbox]:focus,
+.monaco-editor,
+.monaco-diff-editor input[type=search]:focus,
+.monaco-editor,
+.monaco-diff-editor input[type=text]:focus,
+.monaco-editor,
+.monaco-diff-editor select:focus,
+.monaco-editor,
+.monaco-diff-editor textarea:focus {
+    outline: none !important;
 }

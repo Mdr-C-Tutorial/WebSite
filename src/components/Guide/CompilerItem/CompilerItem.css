@@ -1,0 +1,49 @@
+.CompilerItem {
+    height: 2.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .9vw;
+    border-radius: .5vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    transition: all .2s;
+    color: transparent;
+    cursor: pointer;
+}
+
+.CompilerItem:hover {
+    background-color: #6663;
+    color: #fffa;
+}
+
+.CompilerItem.Selected {
+    color: white;
+}
+
+.CompilerItem .CompilerInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-family: 'JetBrains Mono';
+    font-weight: 300;
+}
+
+.CompilerItem .CompilerInfo .CompilerName {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1.1vw;
+    width: 4.5vw;
+}
+
+.CompilerItem .CompilerInfo .CompilerVersion {
+    font-size: 1vw;
+    color: white;
+    width: 4.5vw;
+}
+
+.CompilerItem .CompilerInfo .CompilerDate {
+    font-size: .9vw;
+    color: #ccc;
+}

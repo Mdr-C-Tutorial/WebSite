@@ -21,7 +21,7 @@
 .App .AppContainer .AppContent>p {
     font-family: 'HarmonyOS Sans';
     font-weight: 300;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     color: #eee;
 }
 
@@ -95,6 +95,33 @@
     opacity: 0;
     transform: translate(0.25vw, 0.25vw) scale(0);
     transition: all 0.3s ease;
+    z-index: 1;
+}
+
+@property --conic-angle {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0.1deg;
+}
+
+.ToolBarItems a::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 50%;
+    background: conic-gradient(var(--yellow-02) var(--conic-angle), white var(--conic-angle));
+    -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 1px), #fff calc(100% - 1px));
+    mask: radial-gradient(farthest-side, transparent calc(100% - 1px), #fff calc(100% - 1px));
+    transition: --conic-angle 2s ease;
+}
+
+.ToolBarItems a:hover {
+    color: var(--yellow-02);
+    border-color: transparent;
+}
+
+.ToolBarItems a:hover::after {
+    --conic-angle: 720deg;
 }
 
 .ToolBar:hover .ToolBarItems a {
