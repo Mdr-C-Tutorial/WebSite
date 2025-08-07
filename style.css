@@ -1,0 +1,310 @@
+@font-face {
+    font-family: 'Lovely';
+    src: url(/fonts/Lovely.woff2)format(woff2), url(/fonts/Lovely.ttf)format(truetype);
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url(/fonts/Quicksand-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url(/fonts/Quicksand-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url(/fonts/Quicksand-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url(/fonts/Quicksand-Bold.ttf);
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none !important;
+    /* 使用 !important 确保覆盖其他 display 样式 */
+}
+
+/* 1. 全局与根元素样式 */
+:root {
+    --primary-color: #fff;
+    --primary-hover-color: #eee;
+    --background-color: #ffffff;
+    --card-background-color: #ffffff;
+    --title-color: black;
+    --text-color: #222;
+    --subtle-border-color: #dddddd;
+    --code-font: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Consolas, 'Courier New', monospace;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    /* Chrome Safari */
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 18px;
+    font-family: Quicksand, "HarmonyOS Sans";
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--title-color);
+    font-family: Lovely;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.5em;
+    color: var(--text-color);
+    font-family: Quicksand, Lovely;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+pre {
+    margin-top: 1rem;
+}
+
+a {
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #444;
+    font-family: Lovely, Quicksand;
+    margin-left: .5rem;
+    text-decoration: dotted underline;
+    transition: all .3s;
+}
+
+a:hover {
+    color: var(--title-color);
+    text-decoration: underline;
+}
+
+/* 2. 头部与导航栏 */
+header {
+    /* 为 sticky 定位留出空间 */
+    height: 80px;
+}
+
+#main-nav {
+    background-color: var(--card-background-color);
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* 允许在小屏幕上换行 */
+    gap: 1rem;
+    /* 元素之间的间距 */
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: auto;
+    /* 高度自适应内容 */
+    min-height: 80px;
+    box-sizing: border-box;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-family: "Poppins";
+    font-weight: 900;
+    flex-shrink: 0;
+    /* 防止品牌文字被压缩 */
+    color: var(--title-color);
+}
+
+.nav-control {
+    font-family: var(--code-font);
+    font-size: 1.25rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+#n-value {
+    color: var(--title-color);
+    min-width: 20px;
+    /* 防止数字变化时布局跳动 */
+    text-align: left;
+}
+
+.expressions {
+    display: flex;
+    flex-wrap: wrap;
+    /* 允许按钮换行 */
+    flex-direction: row-reverse;
+    gap: 0.5rem;
+    /* 按钮之间的间距 */
+    justify-content: center;
+}
+
+.expressions button {
+    font-family: var(--code-font);
+    background-color: var(--primary-color);
+    color: var(--title-color);
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+.expressions button:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-2px);
+}
+
+.expressions button:active {
+    transform: translateY(0);
+}
+
+/* 3. 主内容区域 */
+main#content-area {
+    max-width: 1200px;
+    margin: 2rem auto;
+    background-color: var(--card-background-color);
+    border-radius: 8px;
+    min-height: calc(100vh - 14rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main#content-area h1 {
+    color: #222;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+main#content-area code {
+    font-family: var(--code-font);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+main#content-area pre {
+    background-color: #282c34;
+    /* 暗色背景，适合代码块 */
+    color: #abb2bf;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    /* 如果代码过长，允许横向滚动 */
+    font-family: var(--code-font);
+}
+
+/* 4. 页脚 */
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    color: #6c757d;
+    font-size: 0.9rem;
+    border-top: 1px solid var(--subtle-border-color);
+}
+
+
+/* 5. 彩蛋专属样式 */
+.easter-egg {
+    text-align: center;
+    border: 2px dashed #ff9800;
+    padding: 2rem;
+    background-color: #fffaf0;
+    border-radius: 8px;
+}
+
+.easter-egg h1 {
+    color: #ff5722;
+    border-bottom: none;
+}
+
+.easter-egg h2 {
+    color: #ff7f50;
+}
+
+.easter-egg pre {
+    display: inline-block;
+    background-color: #eee;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: left;
+}
+
+
+/* 6. 响应式设计 (针对中小型屏幕) */
+@media (max-width: 1135px) {
+
+    #huge-title {
+        font-size: 3rem !important;
+    }
+
+    #main-nav {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+    }
+
+    main#content-area {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 1.2rem;
+    }
+
+    .nav-control {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .expressions {
+        gap: 0.3rem;
+    }
+
+    .expressions button {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.7rem;
+    }
+
+    main#content-area {
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+}
