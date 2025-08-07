@@ -96,7 +96,7 @@ const pageContent = {
     '32767': `<h3 style:"font-weight: 400;">这是 16 位有符号整数的最大值。</h3>`,
     '65535': `<h3 style:"font-weight: 400;">这是 16 位无符号整数的最大值。</h3>`,
     '114514': `<img src="img/114514.jpg"/>`,
-    '299792458:': `
+    '299792458': `
         <h3 style:"font-weight: 400;">我曾遇到一束光</h3>
         <h3 style:"font-weight: 400;">在前方</h3>
     `,
@@ -146,11 +146,6 @@ function updateButtonVisibility() {
     btnBack.classList.toggle('hidden', n < 19n);
 }
 
-/**
- * 使用二分查找算法计算 BigInt 的整数平方根。
- * @param {bigint} n - 一个非负的 BigInt。
- * @returns {bigint} n 的整数平方根。
- */
 function bigIntSqrt(n) {
     if (n < 2n) {
         return n;
