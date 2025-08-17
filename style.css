@@ -27,6 +27,24 @@
     font-weight: 700;
 }
 
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url(/fonts/JetBrainsMonoNL-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url(/fonts/JetBrainsMono-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(/fonts/Poppins-Black.ttf);
+    font-weight: 900;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -97,10 +115,6 @@ a:hover {
     text-decoration: underline;
 }
 
-header {
-    height: 80px;
-}
-
 kbd {
     border-radius: 2px;
     border: 1px solid #ececec;
@@ -119,6 +133,11 @@ a>kbd {
     margin-left: 8px;
 }
 
+
+header {
+    height: 80px;
+}
+
 #main-nav {
     background-color: var(--card-background-color);
     padding: 1rem 2rem;
@@ -128,7 +147,6 @@ a>kbd {
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-
     position: fixed;
     top: 0;
     left: 0;
@@ -177,7 +195,7 @@ a>kbd {
     background-color: var(--primary-color);
     color: var(--title-color);
     border: none;
-    padding: 0.6rem .5rem;
+    padding: 0.6rem 1rem;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
