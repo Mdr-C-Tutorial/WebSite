@@ -27,7 +27,7 @@ const pageContent = {
     '1': `
         <div style="text-align: center;">
             <h1 id="huge-title" style="font-size: 6em;">Mdr-C-Tutorial</h1>
-            <p style="font-size: 1.3em; font-weight: 400; color: #444;">Click <code onClick="performOperation('++')">++</code> or <code onClick="performOperation('--')">--</code> to start or <a href="https://mdr.aymao.com/C/">查看文档</a></p>
+            <p style="font-size: 1.3em; font-weight: 400; color: #444;">Click <code onClick="performOperation('++')">++<kbd>ArrowUp</kbd></code> or <code onClick="performOperation('--')">--<kbd>ArrowDown</kbd></code> to start or <a href="https://mdr.aymao.com/C/">查看文档<kbd>Enter</kbd></a></p>
         </div>
     `,
     '2': `
@@ -211,3 +211,16 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePageContent();
     updateButtonVisibility();
 });
+
+document.addEventListener('keydown', (event) => {
+    if (event.key == 'ArrowUp') { performOperation('++') }
+    if (event.key == 'ArrowDown') { performOperation('--') }
+    if (event.key == '*') { performOperation('*=2') }
+    if (event.key == '/') { performOperation('/=2') }
+    if (event.key == '+') { performOperation('+=5') }
+    if (event.key == '%') { performOperation('%=3') }
+    if (event.key == 'n') { performOperation('*=n') }
+    if (event.key == 'f') { performOperation('**=0.5') }
+    if (event.key == '1') { performOperation('=1') }
+    if (event.key == 'Enter' && n === 1n) { window.location.href = "https://mdr.aymao.com/C" }
+})
